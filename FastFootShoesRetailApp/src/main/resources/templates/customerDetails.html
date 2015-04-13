@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorator="layout"
+  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fast Foot Customers Rule!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+</head>
+<body>
+	<section layout:fragment="content">
+	<h4>Customer Details:</h4>
+	<form class="form-horizontal" action="#" th:action="@{/updateCustomer}" th:object="${cust}" method="post">
+		<input type="hidden" id="id" name="id" th:value="*{id}" size="80" />
+		<table class="table table-striped table-hover">
+			<tr>
+				<td>Name:</td>
+				<td><input class="form-control" type="text" id="name" name="name" th:value="*{name}" size="80" /></td>
+			</tr>
+			<tr>
+				<td>City:</td>
+				<td><input class="form-control" type="text" id="city" name="city" th:value="*{city}" size="80" /></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input class="form-control" type="text" id="emailAddress" name="emailAddress" th:value="*{emailAddress}" size="80" /></td>
+			</tr>
+			<tr>
+				<td>Birthday (To Update use format: yyyyMMdd):</td>
+				<td><input class="form-control" type="text" id="birthday" name="birthday" th:value="*{birthday}" size="80"/></td>
+			</tr>
+			<tr>
+				<td>Delete:</td>
+				<td>
+					<div class="checkbox">
+						<input class="form-control" type="checkbox" id="delete" name="delete" />
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<button class="btn btn-primary" type="submit">Update</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+	<h4>Customer Status</h4>
+	
+	<table class="table table-hover">
+	      <tr>
+	        <th>Transaction Score: </th>
+	        <th>Discount Level: </th>
+	       <!--   <th>Time To Process: </th> -->
+	      </tr>
+	      <tr>
+	        <td th:text="${transaction_count}">Transaction Score</td>
+	        <td th:text="${discount_level}">Discount Level</td>
+	       <!--   <td th:text="${discountprocessTime}">Discount Level</td> -->
+	      </tr>
+	    </table>
+	
+	<h4>Customer Transactions</h4>
+	<div class="table-responsive">
+		<table class="table table-hover">
+	      <tr>
+	        <th>Date</th>
+	        <th>Product</th>
+	        <th>Quantity</th>
+	        <th>Retail Price Per Unit</th>
+	        <th>Total Cost</th>
+	        <th>Order Status</th>
+	      </tr>
+	      <tr th:each="txn : ${transactions}">
+	        <td th:text="${txn.transactionDate}">Date</td>
+	        <td th:text="${txn.productId}">Product Id</td>
+	        <td th:text="${txn.quantity}">Quantity</td>
+	        <td th:text="${txn.retailPrice}">Retail Price Per Unit</td>
+	        <td th:text="${txn.quantity * txn.retailPrice}">Total Cost</td>
+	        <td th:text="${txn.orderStatus}">Status</td>
+	      </tr>
+	    </table>
+    </div>
+	</section>
+</body>
+</html> 

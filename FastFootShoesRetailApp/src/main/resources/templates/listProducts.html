@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorator="layout">
+<head>
+<title>Fast Foot Customers Rule!</title>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#products').dataTable();
+		});
+	</script>
+</head>
+<body>
+	<section layout:fragment="content">
+		<table id="products" class="table table-hover">
+		<thead>
+			<tr>
+				<th>Brand</th>
+				<th>Type</th>
+				<th>Gender</th>
+				<th>Color</th>
+				<th>Size</th>
+				<th>Whole Sale Cost</th>
+				<th>Stock On Hand</th>
+				<th>Place Order</th>
+			</tr>
+		</thead>
+		
+		<tfoot>
+			<tr>
+				<th>Brand</th>
+				<th>Type</th>
+				<th>Gender</th>
+				<th>Color</th>
+				<th>Size</th>
+				<th>Whole Sale Cost</th>
+				<th>Stock On Hand</th>
+				<th>Place Order</th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr th:each="product : ${products}">
+				<td th:text="${product.brand}">Brand</td>
+				<td th:text="${product.type}">Type</td>
+				<td th:text="${product.gender}">Gender</td>
+				<td th:text="${product.color}">Color</td>
+				<td th:text="${product.size}">Size</td>
+				<td th:text="${product.stockOnHand}">Stock On Hand</td>
+				<td th:text="${product.wholeSalePrice}">Whole Sale Cost</td>
+				<td><a th:href="@{/collectOrder(id=${product.id})}" >Order</a></td>
+			</tr>
+		</tbody>
+		</table>
+	</section>
+</body>
+</html>

@@ -40,10 +40,6 @@
 	<bean id="alertsDAO" class="org.apache.geode.demo.fastfootshoes.clusterside.util.AlertsDerbyDAO">
 		<constructor-arg ref="dataSource"/>
 	</bean>
-		
-	<bean id="asyncAlertWriter" class="org.apache.geode.demo.fastfootshoes.clusterside.listeners.AsyncAlertWriter">
-		<property name="alertsDAO" ref="alertsDAO"/>
-	</bean>
 	
 	<bean id="alertCacheWriter" class="org.apache.geode.demo.fastfootshoes.clusterside.writers.AlertCacheWriter">
 	 	<property name="alertsDAO" ref="alertsDAO"/>

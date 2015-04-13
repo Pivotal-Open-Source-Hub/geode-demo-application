@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Fast Foot Shoes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+.orderbuttonsRow {
+	width: 600px;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+.orderbutton {
+  	width: 400px;
+}
+.spacer {
+	height: 25px;
+}
+</style>
+</head>
+<body>
+	<section layout:fragment="content">
+		<div class="row orderbuttonsRow">
+			<div class="col-md-4">
+				<a href="/collectOrder" class="btn btn-primary btn-lg orderbutton" role="button">Place an Order</a>
+			</div>
+		</div>
+		<div class="spacer"></div>
+		<div class="row orderbuttonsRow" align="center">
+			<div class="col-md-4">
+				<a href="/listAllOrders" class="btn btn-primary btn-lg orderbutton" role="button">Show All Orders</a>
+			</div>
+		</div>
+		<div class="spacer"></div>
+		<div class="row orderbuttonsRow" align="center">
+			<div class="col-md-4">
+				<a href="/listAllOpenOrders" class="btn btn-primary btn-lg orderbutton" role="button">Show All Open Orders</a>
+			</div>
+		</div>
+		<div class="spacer"></div>
+	</section>
+</body>
+</html>

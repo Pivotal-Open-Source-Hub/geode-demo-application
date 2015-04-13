@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:gfe="http://www.springframework.org/schema/gemfire"
+	xmlns:gfe-data="http://www.springframework.org/schema/data/gemfire"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/gemfire http://www.springframework.org/schema/gemfire/spring-gemfire.xsd
+		http://www.springframework.org/schema/data/gemfire http://www.springframework.org/schema/data/gemfire/spring-data-gemfire.xsd">
+
+
+	<bean id="pdxSerializer" class="com.gemstone.gemfire.pdx.ReflectionBasedAutoSerializer">
+		<constructor-arg value="org.apache.geode.demo.fastfootshoes.model.*"/>
+	</bean>
+
+	<gfe:cache id="gemfireCache" pdx-serializer-ref="pdxSerializer" copy-on-read="false" />
+
+	<!-- configure the cache and set the port to 0 for it picks the first available port -->
+	<gfe:cache-server port="0" cache-ref="gemfireCache" />
+
+	<!-- add a listener to let us know when stock level drop -->
+	<bean id="transactionListener" class="org.apache.geode.demo.fastfootshoes.clusterside.listeners.TransactionListener"/>
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver" />
+		<property name="url" value="jdbc:derby:/fastfootshoes;create=true" />
+		<property name="username" value="" />
+		<property name="password" value="" />
+	</bean>
+	
+	<bean id="alertsDAO" class="org.apache.geode.demo.fastfootshoes.clusterside.util.AlertsDerbyDAO">
+		<constructor-arg ref="dataSource"/>
+	</bean>
+	
+	<bean id="alertCacheWriter" class="org.apache.geode.demo.fastfootshoes.clusterside.writers.AlertCacheWriter">
+	 	<property name="alertsDAO" ref="alertsDAO"/>
+	</bean>
+		
+	<!-- 
+	<bean id="asyncAlertWriter" class="io.pivotal.ce.gemfire.fastfootshoes.serverside.listeners.AsyncAlertWriter">
+		<property name="alertsDAO" ref="alertsDAO"/>
+	</bean>
+	 -->
+	 
+	<!-- configure the regions and wire in event extensions -->
+	<gfe:partitioned-region id="Alert" copies="1">
+		<gfe:cache-writer ref="alertCacheWriter" />
+		<!-- 
+			<gfe:async-event-queue parallel="true" batch-time-interval="10000">
+				<gfe:async-event-listener ref="asyncAlertWriter" />
+			</gfe:async-event-queue>
+		 -->
+	</gfe:partitioned-region>
+	<gfe:replicated-region id="Customer" />
+	<gfe:partitioned-region id="Transaction" copies="1">
+		<gfe:cache-listener>
+			<ref bean="transactionListener" />
+		</gfe:cache-listener>
+	</gfe:partitioned-region>
+	<gfe:replicated-region id="MarkUp" />
+	<gfe:replicated-region id="Product" scope="DISTRIBUTED_ACK" />
+
+	<gfe:index id="customerTransactionIndex" expression="customerId" from="/Transaction" />
+
+	<!-- turn on annotation to make use of repositories and another annotated features -->
+	<gfe:annotation-driven />
+
+	<context:component-scan base-package="org.apache.geode.demo.fastfootshoes.clusterside.functions"/>
+	<gfe-data:function-executions base-package="org.apache.geode.demo.fastfootshoes.clusterside.functions"/>
+	<gfe:annotation-driven />
+	<gfe-data:repositories base-package="org.apache.geode.demo.fastfootshoes.repositories" />
+
+</beans>

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org" layout:decorator="layout">
+<head>
+<title>Fastfoot Shoes Entry System</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" th:src="@{js/gf-repo-counts.js}"></script>
+<script type="text/javascript" th:src="@{js/gf-highchart.js}"></script>
+
+<style>
+.alert {
+	color: blue;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.alertList {
+	height: 200px;
+	overflow-y: auto;
+}
+</style>
+
+</head>
+<body>
+	<section layout:fragment="content">
+		<!-- Open Widget Row -->
+		<div class="row">
+			<!-- Missed Orders Widget -->
+			<div class="col-md-4">
+				<div class="panel panel-warning">
+					<div class="panel-heading" align="center">
+						<h3 class="panel-title">Back Orders</h3>
+					</div>
+					<div id="missedOrders"  style="height:150px" align="center" class="alert"><i class='fa fa-spinner fa-spin'></i></div>
+				</div>
+			</div>
+			<!-- Stock By Brand Widget -->
+			<div class="col-md-4">
+				<div class="panel panel-warning">
+					<div class="panel-heading" align="center">
+						<h3 class="panel-title">Stock By Brand</h3>
+					</div>
+					<div id="stockByBrand" style="height:150px" align="center" class="alert"><i class='fa fa-spinner fa-spin'></i></div>
+				</div>
+			</div>
+			<!-- stock by type widget -->
+			<div class="col-md-4">
+				<div class="panel panel-warning">
+					<div class="panel-heading" align="center">
+						<h3 class="panel-title">Stock By Type</h3>
+					</div>
+					<div id="stockByType" style="height:150px" align="center" class="alert"><i class='fa fa-spinner fa-spin'></i></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="span12">
+				<div id="chart" style="width: 100%; height: 500px;"></div>
+		</div>
+	</section>
+</body>
+</html>

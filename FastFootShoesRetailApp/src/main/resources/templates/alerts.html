@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Fast Foot Customers Rule!</title>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#alerts').dataTable();
+		});
+	</script>
+</head>
+<body>
+	<section layout:fragment="content">
+		<table class="table table-condensed table-hover" id="alerts">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Message</th>
+				<th>Time</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th>Id</th>
+				<th>Message</th>
+				<th>Time</th>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr th:each="alert : ${alerts}">
+				<td th:text="${alert.id}">Id</td>
+				<td th:text="${alert.message}">Message</td>
+				<td th:text="${alert.messageDate}">Date</td>
+			</tr>
+		</tbody>
+		</table>
+	</section>
+</body>
+</html>

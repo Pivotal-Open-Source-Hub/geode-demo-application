@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+<head>
+    <title>Fast Foot Customers Rule!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<section layout:fragment="content">
+		<div style="height: 400px;">
+			<h3>Order Completed!</h3>
+			<a th:href="@{/findCustomerById(id=${id})}">Click to view the Customer Profile</a>
+		</div>
+	</section>
+
+</body>
+</html> 
