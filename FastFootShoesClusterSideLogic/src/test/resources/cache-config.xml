@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:gfe="http://www.springframework.org/schema/gemfire"
+	xmlns:gfe-data="http://www.springframework.org/schema/data/gemfire"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/data/gemfire http://www.springframework.org/schema/data/gemfire/spring-data-gemfire.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+		http://www.springframework.org/schema/gemfire http://www.springframework.org/schema/gemfire/spring-gemfire.xsd">
+	
+	
+	<util:properties id="peerCacheConfigurationSettings">
+		<prop key="name">springGemFirePeerCache</prop>
+		<prop key="locators">localhost[11235]</prop>
+		<prop key="log-level">config</prop>
+		<prop key="mcast-port">0</prop>
+		<prop key="start-locator">localhost[11235]</prop>
+	</util:properties>
+	
+	<bean id="pdxSerializer" class="com.gemstone.gemfire.pdx.ReflectionBasedAutoSerializer">
+		<constructor-arg value="org.apache.geode.demo.fastfootshoes.model.*"/>
+	</bean>
+
+	<gfe:cache properties-ref="peerCacheConfigurationSettings" pdx-serializer-ref="pdxSerializer"/>
+	
+	<gfe:cache-server auto-startup="true" cache-ref="gemfireCache" />
+	
+	<bean id="transactionListener" class="org.apache.geode.demo.fastfootshoes.clusterside.listeners.TransactionListener"/>
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver" />
+		<property name="url" value="jdbc:derby:fastfootshoes;create=true" />
+		<property name="username" value="" />
+		<property name="password" value="" />
+	</bean>
+	
+	<bean id="alertsDAO" class="org.apache.geode.demo.fastfootshoes.clusterside.util.AlertsDerbyDAO">
+		<constructor-arg ref="dataSource"/>
+	</bean>
+		
+	<bean id="asyncAlertWriter" class="org.apache.geode.demo.fastfootshoes.clusterside.listeners.AsyncAlertWriter">
+		<property name="alertsDAO" ref="alertsDAO"/>
+	</bean>
+
+	<!-- configure the regions and wire in event extensions -->
+	<gfe:partitioned-region close="true" id="Alert" copies="1">
+			<gfe:async-event-queue parallel="true" batch-time-interval="10000">
+				<gfe:async-event-listener ref="asyncAlertWriter" />
+			</gfe:async-event-queue>
+	</gfe:partitioned-region>
+
+	<gfe:replicated-region id="Customer" name="Customer" persistent="false"/>
+	
+	<!-- wire the listener to the transaction region -->
+	<gfe:partitioned-region copies="1" close="true" id="Transaction" name="Transaction">
+		<gfe:cache-listener ref="transactionListener"/>
+	</gfe:partitioned-region>
+	
+	<gfe:replicated-region id="TransactionSummary" scope="distributed-ack" name="TransactionSummary" />
+	<gfe:replicated-region id="MarkUp" scope="distributed-ack" name="MarkUp" />
+	<gfe:replicated-region id="Product" scope="distributed-ack" name="Product" />
+	
+	<context:component-scan base-package="org.apache.geode.demo.fastfootshoes.clusterside.functions"/>
+	<gfe-data:function-executions base-package="org.apache.geode.demo.fastfootshoes.clusterside.functions"/>
+	<gfe:annotation-driven />
+	<gfe-data:repositories base-package="org.apache.geode.demo.fastfootshoes.repositories" />
+	
+</beans>

@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.apache.geode.demo</groupId>
+	<artifactId>FastFootShoesClusterSideLogic</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>FastFootShoesClusterSideLogic</name>
+	<description>CacheListeners, Functions and Write Through Logic</description>
+
+	<!-- The Gemfire jar comes from this repository -->
+	<repositories>
+		<repository>
+			<id>spring-release</id>
+			<name>Spring Maven RELEASE Repository</name>
+			<url>http://repo.spring.io/libs-release</url>
+		</repository>
+	</repositories>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<spring.data.gemfire>1.6.0.RELEASE</spring.data.gemfire>
+		<spring-data-commons-core>1.4.1.RELEASE</spring-data-commons-core>
+		<spring-jdbc>4.1.6.RELEASE</spring-jdbc>
+		<gemfire>8.0.0</gemfire>
+		<junit>4.11</junit>
+		<spring-test>4.1.6.RELEASE</spring-test>
+		<spring>4.1.0.RELEASE</spring>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.geode.demo</groupId>
+			<artifactId>FastFootShoesModel</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>4.1.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<version>10.11.1.1</version>
+		</dependency>
+	</dependencies>
+</project>
