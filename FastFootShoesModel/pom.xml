@@ -21,7 +21,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<spring.data.gemfire>1.6.0.RELEASE</spring.data.gemfire>
 		<spring-data-commons-core>1.4.1.RELEASE</spring-data-commons-core>
-		<gemfire>8.0.0</gemfire>
+		<gemfire>8.1.0</gemfire>
 		<junit>4.11</junit>
 		<spring-test>4.1.6.RELEASE</spring-test>
 		<spring>4.1.0.RELEASE</spring>
