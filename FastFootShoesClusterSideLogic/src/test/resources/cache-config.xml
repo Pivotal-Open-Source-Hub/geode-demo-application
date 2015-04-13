@@ -44,12 +44,14 @@
 	<bean id="asyncAlertWriter" class="org.apache.geode.demo.fastfootshoes.clusterside.listeners.AsyncAlertWriter">
 		<property name="alertsDAO" ref="alertsDAO"/>
 	</bean>
+	
+	<bean id="alertCacheWriter" class="org.apache.geode.demo.fastfootshoes.clusterside.writers.AlertCacheWriter">
+	 	<property name="alertsDAO" ref="alertsDAO"/>
+	</bean>
 
 	<!-- configure the regions and wire in event extensions -->
 	<gfe:partitioned-region close="true" id="Alert" copies="1">
-			<gfe:async-event-queue parallel="true" batch-time-interval="10000">
-				<gfe:async-event-listener ref="asyncAlertWriter" />
-			</gfe:async-event-queue>
+		<gfe:cache-writer ref="alertCacheWriter" />
 	</gfe:partitioned-region>
 
 	<gfe:replicated-region id="Customer" name="Customer" persistent="false"/>
