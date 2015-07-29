@@ -17,12 +17,13 @@ With this option the project can be downloaded and the Geode cluster as well as 
 ### Prerequisites
 1. All scripts to run the samples are written in Bash, as a result the target machine needs to be MAC OSX or Linux
 2. Java JDK (Oracle is recommended) needs to be installed on the machine 1.7+ and the JAVA_HOME variable should be set
+3. Port 8080 is free for the demo application to run on (if port 8080 is not free the application can be configured to use another port, however its default in 8080)
 
 ### Set Up
 1. Download the project zip geode-demo-application-master.zip
 2. Uncompress the zip
-3. cd into the directory
-4. cd into the scripts folder
+3. cd into the directory geode-demo-application-master
+4. cd into the geode-demo-application-master/scripts folder
 5. All scripts to run the demo and any dependancies are found in this folder
 ```shell
 piv-wifi-19-156:scripts lshannon$ pwd
@@ -156,9 +157,25 @@ No errors were recorded
 
 Press Enter to continue.
 ```
+Leave this terminal window open and start a new one to run the demo application from.
 
 ### Starting the Demo Application
 
+1. In a new terminal window CD to the geode-demo-application-master/scripts folder
+2. Run the ./startDemo.sh command
+3. This will start a Spring Boot Application that connects to the cluster and a client and demonstrates some of the functionality of Geode
+
+The final message should show that the application has started and is listening on port 8080
+```shell
+HandlerMapping     : Mapped "{[/dump],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-07-29 11:47:26.914  INFO 68731 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2015-07-29 11:47:26.921  INFO 68731 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2015-07-29 11:47:27.062  INFO 68731 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2015-07-29 11:47:27.064  INFO 68731 --- [           main] o.a.g.d.f.application.Application        : Started Application in 5.246 seconds (JVM running for 5.677)
+
+```
+The application should now be started and can be tested by loading the http://127.0.0.1:8080/home url into a browser.
+![demo application](/images/demo-application-home.png)
 
 ### Trouble Shooting
 ```shell
