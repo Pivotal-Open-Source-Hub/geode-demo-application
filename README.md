@@ -177,6 +177,11 @@ HandlerMapping     : Mapped "{[/dump],methods=[GET],params=[],headers=[],consume
 The application should now be started and can be tested by loading the http://127.0.0.1:8080/home url into a browser.
 ![demo application](/images/demo-application-home.png)
 
+### 
+
+### Teardown
+1. Provided there are no other Java processes running, `killall java` will kill all running clusters and Spring Boot applications from this demo.
+
 ### Trouble Shooting
 ```shell
 Error: Exception thrown by the agent : java.net.MalformedURLException: Local host name unknown: java.net.UnknownHostException: piv-wifi-19-156.pivotallabs.com: piv-wifi-19-156.pivotallabs.com: nodename nor servname provided, or not known
