@@ -3,25 +3,20 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.gopivotal.ce.gemfire</groupId>
+	<groupId>org.apache.geode.demo.fastfootshoes</groupId>
 
 	<name>FastFootShoesRetailApp</name>
 	<description>Application for tracking retail sales</description>
+	<version>0.0.1-RELEASE</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.2.2.RELEASE</version>
+		<version>1.2.3.RELEASE</version>
 		<relativePath />
 	</parent>
 
-	<repositories>
-		<repository>
-			<id>spring-release</id>
-			<name>Spring Maven RELEASE Repository</name>
-			<url>http://repo.spring.io/libs-release</url>
-		</repository>
-	</repositories>
+
 
 	<dependencies>
 		<dependency>
@@ -42,10 +37,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-gemfire</artifactId>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
@@ -97,12 +89,8 @@
 			<artifactId>font-awesome</artifactId>
 			<version>4.2.0</version>
 		</dependency>
-
-		<dependency>
-			<groupId>org.apache.geode.demo</groupId>
-			<artifactId>FastFootShoesModel</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
+		
 		<dependency>
 			<groupId>org.apache.geode.demo</groupId>
 			<artifactId>FastFootShoesClusterSideLogic</artifactId>
@@ -114,7 +102,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<start-class>org.apache.geode.demo.fastfootshoes.application</start-class>
+		<start-class>org.apache.geode.demo.fastfootshoes.application.Application</start-class>
 		<java.version>1.7</java.version>
 	</properties>
 

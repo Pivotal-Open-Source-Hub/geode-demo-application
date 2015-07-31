@@ -31,10 +31,10 @@
 	<bean id="transactionListener" class="org.apache.geode.demo.fastfootshoes.clusterside.listeners.TransactionListener"/>
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver" />
-		<property name="url" value="jdbc:derby:fastfootshoes;create=true" />
-		<property name="username" value="" />
-		<property name="password" value="" />
+		<property name="driverClassName" value="org.apache.derby.jdbc.ClientDriver" />
+		<property name="url" value="jdbc:derby://localhost:1527/fastfootshoes;create=true" />
+		<property name="username" value="APP" />
+		<property name="password" value="APP" />
 	</bean>
 	
 	<bean id="alertsDAO" class="org.apache.geode.demo.fastfootshoes.clusterside.util.AlertsDerbyDAO">

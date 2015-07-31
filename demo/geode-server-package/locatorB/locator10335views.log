@@ -1,0 +1,18 @@
+
+[info 2015/07/29 18:47:36.463 EDT <main> tid=0x1] Log opened with new distributed system connection.  View(creator=Luke-Shannons-Macbook-Pro(locatorA:80807:locator)<v0>:22498, viewId=1, [Luke-Shannons-Macbook-Pro(locatorA:80807:locator)<v0>:22498, Luke-Shannons-Macbook-Pro(locatorB:80819:locator)<v1>:18091])
+
+[info 2015/07/29 18:47:40.749 EDT <DM-MemberEventInvoker> tid=0x1e] A new member joined: Luke-Shannons-Macbook-Pro(serverA:80832)<v2>:4005.  View(creator=Luke-Shannons-Macbook-Pro(locatorA:80807:locator)<v0>:22498, viewId=2, [Luke-Shannons-Macbook-Pro(locatorA:80807:locator)<v0>:22498, Luke-Shannons-Macbook-Pro(locatorB:80819:locator)<v1>:18091, Luke-Shannons-Macbook-Pro(serverA:80832)<v2>:4005])
+
+[info 2015/07/29 18:47:42.962 EDT <Pooled High Priority Message Processor 1> tid=0x33] server summary: 1 cache servers with 0 client connections/current cache servers : Luke-Shannons-Macbook-Pro(serverA:80832)<v2>:4005 
+
+[info 2015/07/29 18:47:47.146 EDT <DM-MemberEventInvoker> tid=0x1e] A new member joined: Luke-Shannons-Macbook-Pro(serverB:80845)<v3>:27154.  View(creator=Luke-Shannons-Macbook-Pro(locatorA:80807:locator)<v0>:22498, viewId=3, [Luke-Shannons-Macbook-Pro(locatorA:80807:locator)<v0>:22498, Luke-Shannons-Macbook-Pro(locatorB:80819:locator)<v1>:18091, Luke-Shannons-Macbook-Pro(serverA:80832)<v2>:4005, Luke-Shannons-Macbook-Pro(serverB:80845)<v3>:27154])
+
+[info 2015/07/29 18:47:48.638 EDT <Pooled High Priority Message Processor 1> tid=0x33] server summary: 2 cache servers with 0 client connections/current cache servers : Luke-Shannons-Macbook-Pro(serverA:80832)<v2>:4005 Luke-Shannons-Macbook-Pro(serverB:80845)<v3>:27154 
+
+[info 2015/07/29 18:47:53.078 EDT <DM-MemberEventInvoker> tid=0x1e] A new member joined: Luke-Shannons-Macbook-Pro(serverC:80858)<v4>:1496.  View(creator=Luke-Shannons-Macbook-Pro(locatorA:80807:locator)<v0>:22498, viewId=4, [Luke-Shannons-Macbook-Pro(locatorA:80807:locator)<v0>:22498, Luke-Shannons-Macbook-Pro(locatorB:80819:locator)<v1>:18091, Luke-Shannons-Macbook-Pro(serverA:80832)<v2>:4005, Luke-Shannons-Macbook-Pro(serverB:80845)<v3>:27154, Luke-Shannons-Macbook-Pro(serverC:80858)<v4>:1496])
+
+[info 2015/07/29 18:47:54.650 EDT <Pooled High Priority Message Processor 1> tid=0x33] server summary: 3 cache servers with 0 client connections/current cache servers : Luke-Shannons-Macbook-Pro(serverA:80832)<v2>:4005 Luke-Shannons-Macbook-Pro(serverB:80845)<v3>:27154 Luke-Shannons-Macbook-Pro(serverC:80858)<v4>:1496 
+
+[info 2015/07/29 18:47:58.932 EDT <DM-MemberEventInvoker> tid=0x1e] A new member joined: Luke-Shannons-Macbook-Pro(serverD:80871)<v5>:41730.  View(creator=Luke-Shannons-Macbook-Pro(locatorA:80807:locator)<v0>:22498, viewId=5, [Luke-Shannons-Macbook-Pro(locatorA:80807:locator)<v0>:22498, Luke-Shannons-Macbook-Pro(locatorB:80819:locator)<v1>:18091, Luke-Shannons-Macbook-Pro(serverA:80832)<v2>:4005, Luke-Shannons-Macbook-Pro(serverB:80845)<v3>:27154, Luke-Shannons-Macbook-Pro(serverC:80858)<v4>:1496, Luke-Shannons-Macbook-Pro(serverD:80871)<v5>:41730])
+
+[info 2015/07/29 18:48:00.452 EDT <Pooled High Priority Message Processor 1> tid=0x33] server summary: 4 cache servers with 0 client connections/current cache servers : Luke-Shannons-Macbook-Pro(serverA:80832)<v2>:4005 Luke-Shannons-Macbook-Pro(serverB:80845)<v3>:27154 Luke-Shannons-Macbook-Pro(serverC:80858)<v4>:1496 Luke-Shannons-Macbook-Pro(serverD:80871)<v5>:41730 

@@ -20,20 +20,14 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<spring.data.gemfire>1.6.0.RELEASE</spring.data.gemfire>
-		<spring-data-commons-core>1.4.1.RELEASE</spring-data-commons-core>
 		<spring-jdbc>4.1.6.RELEASE</spring-jdbc>
-		<gemfire>8.0.0</gemfire>
 		<junit>4.11</junit>
 		<spring-test>4.1.6.RELEASE</spring-test>
 		<spring>4.1.0.RELEASE</spring>
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.apache.geode.demo</groupId>
-			<artifactId>FastFootShoesModel</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
@@ -50,18 +44,40 @@
 			<version>10.11.1.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+	<groupId>org.apache.derby</groupId>
+	<artifactId>derbyclient</artifactId>
+	<version>10.11.1.1</version>
+</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>4.1.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-gemfire</artifactId>
+			<version>1.5.2.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geode.demo</groupId>
+			<artifactId>FastFootShoesModel</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<outputDirectory>../scripts/lib</outputDirectory>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>

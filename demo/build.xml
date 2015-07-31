@@ -1,0 +1,9 @@
+<project basedir=".">
+	<target name="update_package">
+		<copy file="../FastFootShoesClusterSideLogic/target/FastFootShoesClusterSideLogic-0.0.1-SNAPSHOT.jar" todir="geode-server-package/lib"/>
+		<copy file="../FastFootShoesModel/target/FastFootShoesModel-0.0.1-SNAPSHOT.jar" todir="geode-server-package/lib"/>
+		<copy file="../FastFootShoesRetailApp/target/FastFootShoesRetail-0.0.1-RELEASE.jar" todir="geode-server-package/app"/>
+		<copy file="../FastFootShoesTransactionSimulator/target/FastFootShoesTransactionSimulator-0.0.1-SNAPSHOT.jar" todir="geode-server-package/app"/>
+		<copy file="../FastFootShoesHistoricDataLoader/target/FastFootShoesHistoricDataLoader-0.0.1-SNAPSHOT.jar" todir="geode-server-package/app"/>
+	</target>
+</project>

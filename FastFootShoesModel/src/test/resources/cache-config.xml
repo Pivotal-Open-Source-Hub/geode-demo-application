@@ -31,15 +31,15 @@
 		<constructor-arg value="org.apache.geode.demo.fastfootshoes.model.*"/>
 	</bean>
 
-	<gfe:cache pdx-serializer-ref="pdxSerializer" properties-ref="peerCacheConfigurationSettings" />
+	<gfe:cache  id="gemfireCacheTest" pdx-serializer-ref="pdxSerializer" properties-ref="peerCacheConfigurationSettings"/>
 	
-	<gfe:cache-server auto-startup="true" cache-ref="gemfireCache" />
+	<gfe:cache-server auto-startup="true" cache-ref="gemfireCacheTest" />
 			
-	<gfe:replicated-region id="Alert" close="true" scope="distributed-ack"/>	
-	<gfe:replicated-region id="Customer" close="true" scope="distributed-ack"/>
-	<gfe:partitioned-region id="Transaction" close="true"/>
-	<gfe:replicated-region id="MarkUp" close="true" scope="distributed-ack"/>
-	<gfe:replicated-region id="Product" close="true" scope="distributed-ack"/>
+	<gfe:replicated-region cache-ref="gemfireCacheTest" id="Alert" close="true" scope="distributed-ack"/>	
+	<gfe:replicated-region cache-ref="gemfireCacheTest" id="Customer" close="true" scope="distributed-ack"/>
+	<gfe:partitioned-region cache-ref="gemfireCacheTest" id="Transaction" close="true"/>
+	<gfe:replicated-region cache-ref="gemfireCacheTest" id="MarkUp" close="true" scope="distributed-ack"/>
+	<gfe:replicated-region cache-ref="gemfireCacheTest" id="Product" close="true" scope="distributed-ack"/>
 	
 	<gfe-data:repositories base-package="org.apache.geode.demo.fastfootshoes.repositories" />
 		

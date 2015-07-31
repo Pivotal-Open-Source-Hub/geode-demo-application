@@ -15,7 +15,14 @@ public class AlertCacheWriter extends CacheWriterAdapter<String, Alert> implemen
 	
 	private AlertsDerbyDAO alertsDAO;
 	
+	public void beforeCreate(EntryEvent<String, Alert> event) {
+		System.out.println("Before create");
+	    Alert alert = (Alert)event.getNewValue();
+	    alertsDAO.insert(alert);
+	 }
+	
 	public void afterCreate(EntryEvent<String, Alert> event) {
+		System.out.println("After create");
 	    Alert alert = (Alert)event.getNewValue();
 	    alertsDAO.insert(alert);
 	 }

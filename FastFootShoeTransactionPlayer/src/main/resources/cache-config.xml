@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:gfe="http://www.springframework.org/schema/gemfire"
+	xmlns:gfe-data="http://www.springframework.org/schema/data/gemfire"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/data/gemfire http://www.springframework.org/schema/data/gemfire/spring-data-gemfire-1.4.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+		http://www.springframework.org/schema/gemfire http://www.springframework.org/schema/gemfire/spring-gemfire.xsd">
+		
+	
+		<bean id="reflection-pdx-serializer" class="com.gemstone.gemfire.pdx.ReflectionBasedAutoSerializer">
+			<constructor-arg value="io.pivotal.ce.gemfire.fastfootshoes.model.*" />
+		</bean>
+	
+		<gfe:client-cache pool-name="gemfirePool" pdx-serializer-ref="reflection-pdx-serializer"/>
+	
+		<gfe:client-region id="Customer"  pool-name="gemfirePool"/>
+		<gfe:client-region id="Alert"  pool-name="gemfirePool"/>
+		<gfe:client-region id="Product" pool-name="gemfirePool" />
+		<gfe:client-region id="Transaction" pool-name="gemfirePool" />
+		<gfe:client-region id="TransactionSummary" pool-name="gemfirePool" />
+		<gfe:client-region id="MarkUp" pool-name="gemfirePool" />
+		
+		<gfe:pool id="gemfirePool">
+			<gfe:locator host="localhost" port="10334" />
+		</gfe:pool>
+	
+		<!-- turn on annotation to make use of repositories and another annotated features -->
+		<gfe:annotation-driven/>				
+
+		<!-- turn on component scanning to find functions -->
+		<context:component-scan base-package="io.pivotal.ce.gemfire.fastfootshoes" />
+		
+		<!-- allow for detection of Spring Repositories 		-->
+		<gfe-data:repositories base-package="io.pivotal.ce.gemfire.fastfootshoes.repositories"/>
+		
+
+</beans>

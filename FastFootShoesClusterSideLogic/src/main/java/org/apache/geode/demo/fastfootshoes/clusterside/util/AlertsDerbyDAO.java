@@ -35,8 +35,13 @@ public class AlertsDerbyDAO extends JdbcDaoSupport {
 		try {
 			dbmd = dataSource.getConnection().getMetaData();
 			ResultSet rs = dbmd.getTables(null, "APP", "MESSAGE_TABLE", null);
+
+			System.out.println("Checking if schema exists...Hello??");
 			if (!rs.next()) {
 				createSchema = true;
+				System.out.println("Need to create the schema...");
+			} else {
+				System.out.println("Results are valid, no need to work on schema... ");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -52,7 +57,7 @@ public class AlertsDerbyDAO extends JdbcDaoSupport {
 	 */
 	public void insert(Alert alert) {
 		insertSQL = "INSERT INTO message_table (message) VALUES (?)";
-		getJdbcTemplate().update(insertSQL, new Object[] { alert.getMessage() });
+		System.out.println("Result of inserting to table: " + getJdbcTemplate().update(insertSQL, new Object[] { alert.getMessage() }));
 	}
 	
 	/**
@@ -71,7 +76,7 @@ public class AlertsDerbyDAO extends JdbcDaoSupport {
 	 */
 	private void createSchema() {
 		createTable = "CREATE TABLE message_table (id INTEGER NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1), message VARCHAR(100))";
-		getJdbcTemplate().update(createTable);
+		System.out.println("Result of creating schema: " + getJdbcTemplate().update(createTable));
 	}
 
 	public String getInsertSQL() {

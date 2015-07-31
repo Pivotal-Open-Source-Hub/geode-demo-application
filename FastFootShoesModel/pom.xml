@@ -7,52 +7,34 @@
 	<name>FastFootShoesModel</name>
 	<description>This package contains the Pojos for the applications, the Repositories to do all data operations and the client cache configuration.</description>
 
-	<!-- The Gemfire jar comes from this repository  -->
 	<repositories>
 		<repository>
 			<id>spring-release</id>
 			<name>Spring Maven RELEASE Repository</name>
 			<url>http://repo.spring.io/libs-release</url>
 		</repository>
+		<repository>
+			<id>spring-snapshot</id>
+			<name>Spring Maven RELEASE Repository</name>
+			<url>http://repo.spring.io/libs-snapshot</url>
+		</repository>
 	</repositories>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<spring.data.gemfire>1.6.0.RELEASE</spring.data.gemfire>
-		<spring-data-commons-core>1.4.1.RELEASE</spring-data-commons-core>
-		<gemfire>8.1.0</gemfire>
+		<spring.data.gemfire>1.7.0.APACHE-GEODE-EA-SNAPSHOT</spring.data.gemfire>
 		<junit>4.11</junit>
 		<spring-test>4.1.6.RELEASE</spring-test>
-		<spring>4.1.0.RELEASE</spring>
 	</properties>
 
 	<dependencies>
-		<!-- Gemfire TODO: Switch this to the Geode artifact when the repo is available -->
-		<dependency>
-			<groupId>com.gemstone.gemfire</groupId>
-			<artifactId>gemfire</artifactId>
-			<version>${gemfire}</version>
-			<scope>provided</scope>
-		</dependency>
-		
-		<!-- Spring -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-beans</artifactId>
-			<version>${spring}</version>
-		</dependency>
 		
 		<!-- Spring Data -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-gemfire</artifactId>
 			<version>${spring.data.gemfire}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-commons-core</artifactId>
-			<version>${spring-data-commons-core}</version>
 		</dependency>
 		
 		<!-- Testing -->
@@ -74,9 +56,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<outputDirectory>../scripts/lib</outputDirectory>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

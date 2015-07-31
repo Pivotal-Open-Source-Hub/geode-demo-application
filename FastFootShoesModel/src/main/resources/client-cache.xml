@@ -33,7 +33,8 @@
 	<gfe:client-region id="TransactionSummary" pool-name="gemfirePool" />
 	
 	<gfe:pool id="gemfirePool">
-		<gfe:locator host="localhost" port="10334" />
+		<gfe:locator host="ec2-54-175-236-76.compute-1.amazonaws.com" port="10334" />
+		<gfe:locator host="ec2-54-175-236-76.compute-1.amazonaws.com" port="10335" />
 	</gfe:pool>
 	
 	<context:component-scan base-package="org.apache.geode.demo.fastfootshoes.clusterside.functions"/>
