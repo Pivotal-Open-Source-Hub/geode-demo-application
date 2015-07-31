@@ -34,7 +34,7 @@ public class AlertsDerbyDAO extends JdbcDaoSupport {
 		boolean createSchema = false;
 		try {
 			dbmd = dataSource.getConnection().getMetaData();
-			ResultSet rs = dbmd.getTables(null, "APP", "MESSAGE_TABLE", null);
+			ResultSet rs = dbmd.getTables(null, "APP", "MESSAGE", null);
 
 			System.out.println("Checking if schema exists...Hello??");
 			if (!rs.next()) {

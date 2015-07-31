@@ -1,0 +1,1846 @@
+
+[info 2015/07/31 17:18:57.278 EDT serverC <main> tid=0x1] Renamed old log file to "serverC-05-01.log".
+
+[info 2015/07/31 17:18:57.282 EDT serverC <main> tid=0x1] Startup Configuration:
+   ### GemFire Properties defined with system property ###
+  http-service-port=8083
+  locators=127.0.0.1[10334],127.0.0.1[10335]
+  name=serverC
+  start-dev-rest-api=true
+  use-cluster-configuration=false
+  ### GemFire Properties defined with file:/Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/conf/gemfire.properties ###
+  conserve-sockets=false
+  log-level=config
+  mcast-port=0
+  statistic-archive-file=stats.gfs
+  statistic-sample-rate=1000
+  statistic-sampling-enabled=true
+  ### GemFire Properties defined with launcher ###
+  log-file=serverC.log
+  ### GemFire Properties using default values ###
+  ack-severe-alert-threshold=0
+  ack-wait-threshold=15
+  archive-disk-space-limit=0
+  archive-file-size-limit=0
+  async-distribution-timeout=0
+  async-max-queue-size=8
+  async-queue-timeout=60000
+  bind-address=
+  cache-xml-file=cache.xml
+  cluster-configuration-dir=/Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/serverC
+  cluster-ssl-ciphers=any
+  cluster-ssl-enabled=false
+  cluster-ssl-keystore=
+  cluster-ssl-keystore-password=
+  cluster-ssl-keystore-type=
+  cluster-ssl-protocols=any
+  cluster-ssl-require-authentication=true
+  cluster-ssl-truststore=
+  cluster-ssl-truststore-password=
+  conflate-events=server
+  delta-propagation=true
+  deploy-working-dir=.
+  disable-auto-reconnect=false
+  disable-tcp=false
+  distributed-system-id=-1
+  durable-client-id=
+  durable-client-timeout=300
+  enable-cluster-configuration=true
+  enable-network-partition-detection=false
+  enable-time-statistics=false
+  enforce-unique-host=false
+  gateway-ssl-ciphers=any
+  gateway-ssl-enabled=false
+  gateway-ssl-keystore=
+  gateway-ssl-keystore-password=
+  gateway-ssl-keystore-type=
+  gateway-ssl-protocols=any
+  gateway-ssl-require-authentication=true
+  gateway-ssl-truststore=
+  gateway-ssl-truststore-password=
+  groups=
+  http-service-bind-address=
+  http-service-ssl-ciphers=any
+  http-service-ssl-enabled=false
+  http-service-ssl-keystore=
+  http-service-ssl-keystore-password=
+  http-service-ssl-keystore-type=
+  http-service-ssl-protocols=any
+  http-service-ssl-require-authentication=false
+  http-service-ssl-truststore=
+  http-service-ssl-truststore-password=
+  jmx-manager=false
+  jmx-manager-access-file=
+  jmx-manager-bind-address=
+  jmx-manager-hostname-for-clients=
+  jmx-manager-http-port=8083
+  jmx-manager-password-file=
+  jmx-manager-port=1099
+  jmx-manager-ssl=false
+  jmx-manager-ssl-ciphers=any
+  jmx-manager-ssl-enabled=false
+  jmx-manager-ssl-keystore=
+  jmx-manager-ssl-keystore-password=
+  jmx-manager-ssl-keystore-type=
+  jmx-manager-ssl-protocols=any
+  jmx-manager-ssl-require-authentication=true
+  jmx-manager-ssl-truststore=
+  jmx-manager-ssl-truststore-password=
+  jmx-manager-start=false
+  jmx-manager-update-rate=2000
+  load-cluster-configuration-from-dir=false
+  locator-wait-time=0
+  log-disk-space-limit=0
+  log-file-size-limit=0
+  max-num-reconnect-tries=3
+  max-wait-time-reconnect=60000
+  mcast-address=239.192.81.1
+  mcast-flow-control=1048576, 0.25, 5000
+  mcast-recv-buffer-size=1048576
+  mcast-send-buffer-size=65535
+  mcast-ttl=32
+  member-timeout=5000
+  membership-port-range=1024-65535
+  memcached-bind-address=
+  memcached-port=0
+  memcached-protocol=ASCII
+  redundancy-zone=
+  remote-locators=
+  remove-unresponsive-client=false
+  roles=
+  security-=
+  security-client-accessor=
+  security-client-accessor-pp=
+  security-client-auth-init=
+  security-client-authenticator=
+  security-client-dhalgo=
+  security-log-file=
+  security-log-level=config
+  security-peer-auth-init=
+  security-peer-authenticator=
+  security-peer-verifymember-timeout=1000
+  server-bind-address=
+  server-ssl-ciphers=any
+  server-ssl-enabled=false
+  server-ssl-keystore=
+  server-ssl-keystore-password=
+  server-ssl-keystore-type=
+  server-ssl-protocols=any
+  server-ssl-require-authentication=true
+  server-ssl-truststore=
+  server-ssl-truststore-password=
+  socket-buffer-size=32768
+  socket-lease-time=60000
+  ssl-ciphers=any
+  ssl-enabled=false
+  ssl-protocols=any
+  ssl-require-authentication=true
+  start-locator=
+  tcp-port=0
+  udp-fragment-size=60000
+  udp-recv-buffer-size=1048576
+  udp-send-buffer-size=65535
+  user-command-packages=
+  
+
+[info 2015/07/31 17:18:57.302 EDT serverC <main> tid=0x1] 
+  ---------------------------------------------------------------------------
+  
+    Copyright (C) 1997-2015 Pivotal Software, Inc. All rights reserved. This
+    product is protected by U.S. and international copyright and intellectual
+    property laws. Pivotal products are covered by one or more patents listed
+    at http://www.pivotal.io/patents.  Pivotal is a registered trademark
+    of trademark of Pivotal Software, Inc. in the United States and/or other
+    jurisdictions.  All other marks and names mentioned herein may be
+    trademarks of their respective companies.
+  
+  ---------------------------------------------------------------------------
+  Java version:   1.0.0.0-SNAPSHOT abaker 040615 2015-04-06 12:38:07 -0700 javac 1.7.0_75
+  Native version: native code unavailable
+  Source revision: ce63268fc0999b4f9512f2a303f9baf4a541033c
+  Source repository: opengem_dev_Jan15
+  Running on: Luke-Shannons-Macbook-Pro.local/192.168.98.158, 8 cpu(s), x86_64 Mac OS X 10.9.5
+  Process ID: 5324
+  User: lshannon
+  Current dir: /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/serverC
+  Home dir: /Users/lshannon
+  Command Line Parameters:
+    -DgemfirePropertyFile=/Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/conf/gemfire.properties
+    -Dgemfire.locators=127.0.0.1[10334],127.0.0.1[10335]
+    -Dgemfire.use-cluster-configuration=false
+    -Dgemfire.http-service-port=8083
+    -Dgemfire.start-dev-rest-api=true
+    -Xms256m
+    -Xmx256m
+    -XX:OnOutOfMemoryError=kill -KILL %p
+    -Dgemfire.launcher.registerSignalHandlers=true
+    -Djava.awt.headless=true
+    -Dsun.rmi.dgc.server.gcInterval=9223372036854775806
+  Class Path:
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/gemfire-core-1.0.0.0-SNAPSHOT.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/aopalliance-1.0.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/derbyclient-10.11.1.1.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/FastFootShoesClusterSideLogic-0.0.1-SNAPSHOT.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/FastFootShoesModel-0.0.1-SNAPSHOT.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/ShoeDataLoader-0.0.1-RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/slf4j-api-1.7.7.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/spring-aop-4.0.5.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/spring-core-4.1.5.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/spring-jdbc-4.1.0.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/gemfire-core-dependencies.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-aop-3.2.12.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-beans-3.2.12.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-context-3.2.12.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-context-support-3.2.12.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-data-commons-1.9.1.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-data-gemfire-1.5.1.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-expression-3.2.12.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-tx-3.2.12.RELEASE.jar
+  Library Path:
+    /Users/lshannon/Library/Java/Extensions
+    /Library/Java/Extensions
+    /Network/Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+    .
+  System Properties:
+      awt.toolkit = sun.lwawt.macosx.LWCToolkit
+      file.encoding = UTF-8
+      file.encoding.pkg = sun.io
+      file.separator = /
+      ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+      gemfire.http-service-port = 8083
+      gemfire.launcher.registerSignalHandlers = true
+      gemfire.locators = 127.0.0.1[10334],127.0.0.1[10335]
+      gemfire.name = serverC
+      gemfire.start-dev-rest-api = true
+      gemfire.use-cluster-configuration = false
+      gemfirePropertyFile = /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/conf/gemfire.properties
+      gopherProxySet = false
+      http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+      java.awt.graphicsenv = sun.awt.CGraphicsEnvironment
+      java.awt.headless = true
+      java.awt.printerjob = sun.lwawt.macosx.CPrinterJob
+      java.class.version = 51.0
+      java.endorsed.dirs = /Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/endorsed
+      java.ext.dirs = /Users/lshannon/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+      java.home = /Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre
+      java.io.tmpdir = /var/folders/n9/7c9by5xx2q3_2hdd10z7k5_00000gq/T/
+      java.rmi.server.randomIDs = true
+      java.runtime.name = Java(TM) SE Runtime Environment
+      java.runtime.version = 1.7.0_71-b14
+      java.specification.name = Java Platform API Specification
+      java.specification.vendor = Oracle Corporation
+      java.specification.version = 1.7
+      java.vendor = Oracle Corporation
+      java.vendor.url = http://java.oracle.com/
+      java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+      java.version = 1.7.0_71
+      java.vm.info = mixed mode
+      java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+      java.vm.specification.name = Java Virtual Machine Specification
+      java.vm.specification.vendor = Oracle Corporation
+      java.vm.specification.version = 1.7
+      java.vm.vendor = Oracle Corporation
+      java.vm.version = 24.71-b01
+      jna.platform.library.path = /usr/lib:/usr/lib
+      jnidispatch.path = /var/folders/n9/7c9by5xx2q3_2hdd10z7k5_00000gq/T/jna-1299062879/jna8773399125689952628.tmp
+      line.separator = 
+  
+      log4j.configurationFile = jar:file:/Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/gemfire-core-1.0.0.0-SNAPSHOT.jar!/com/gemstone/gemfire/internal/logging/log4j/log4j2-default.xml
+      os.version = 10.9.5
+      p2p.useSSL = false
+      path.separator = :
+      socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+      sun.arch.data.model = 64
+      sun.boot.class.path = /Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/classes
+      sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib
+      sun.cpu.endian = little
+      sun.cpu.isalist = 
+      sun.io.unicode.encoding = UnicodeBig
+      sun.java.command = com.gemstone.gemfire.distributed.ServerLauncher start serverC --redirect-output --server-port=0 --spring-xml-location=file:////Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/conf/fastfootshoes-spring-cache.xml
+      sun.java.launcher = SUN_STANDARD
+      sun.jnu.encoding = UTF-8
+      sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+      sun.nio.ch.bugLevel = 
+      sun.os.patch.level = unknown
+      sun.rmi.dgc.server.gcInterval = 9223372036854775806
+      user.country = US
+      user.country.format = CA
+      user.language = en
+      user.timezone = America/Toronto
+  ---------------------------------------------------------------------------
+  
+
+[info 2015/07/31 17:18:57.309 EDT serverC <main> tid=0x1] Startup Configuration:
+   ### GemFire Properties defined with system property ###
+  http-service-port=8083
+  locators=127.0.0.1[10334],127.0.0.1[10335]
+  name=serverC
+  start-dev-rest-api=true
+  use-cluster-configuration=false
+  ### GemFire Properties defined with file:/Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/conf/gemfire.properties ###
+  conserve-sockets=false
+  log-level=config
+  mcast-port=0
+  statistic-archive-file=stats.gfs
+  statistic-sample-rate=1000
+  statistic-sampling-enabled=true
+  ### GemFire Properties defined with launcher ###
+  log-file=serverC.log
+  ### GemFire Properties using default values ###
+  ack-severe-alert-threshold=0
+  ack-wait-threshold=15
+  archive-disk-space-limit=0
+  archive-file-size-limit=0
+  async-distribution-timeout=0
+  async-max-queue-size=8
+  async-queue-timeout=60000
+  bind-address=
+  cache-xml-file=cache.xml
+  cluster-configuration-dir=/Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/serverC
+  cluster-ssl-ciphers=any
+  cluster-ssl-enabled=false
+  cluster-ssl-keystore=
+  cluster-ssl-keystore-password=
+  cluster-ssl-keystore-type=
+  cluster-ssl-protocols=any
+  cluster-ssl-require-authentication=true
+  cluster-ssl-truststore=
+  cluster-ssl-truststore-password=
+  conflate-events=server
+  delta-propagation=true
+  deploy-working-dir=.
+  disable-auto-reconnect=false
+  disable-tcp=false
+  distributed-system-id=-1
+  durable-client-id=
+  durable-client-timeout=300
+  enable-cluster-configuration=true
+  enable-network-partition-detection=false
+  enable-time-statistics=false
+  enforce-unique-host=false
+  gateway-ssl-ciphers=any
+  gateway-ssl-enabled=false
+  gateway-ssl-keystore=
+  gateway-ssl-keystore-password=
+  gateway-ssl-keystore-type=
+  gateway-ssl-protocols=any
+  gateway-ssl-require-authentication=true
+  gateway-ssl-truststore=
+  gateway-ssl-truststore-password=
+  groups=
+  http-service-bind-address=
+  http-service-ssl-ciphers=any
+  http-service-ssl-enabled=false
+  http-service-ssl-keystore=
+  http-service-ssl-keystore-password=
+  http-service-ssl-keystore-type=
+  http-service-ssl-protocols=any
+  http-service-ssl-require-authentication=false
+  http-service-ssl-truststore=
+  http-service-ssl-truststore-password=
+  jmx-manager=false
+  jmx-manager-access-file=
+  jmx-manager-bind-address=
+  jmx-manager-hostname-for-clients=
+  jmx-manager-http-port=8083
+  jmx-manager-password-file=
+  jmx-manager-port=1099
+  jmx-manager-ssl=false
+  jmx-manager-ssl-ciphers=any
+  jmx-manager-ssl-enabled=false
+  jmx-manager-ssl-keystore=
+  jmx-manager-ssl-keystore-password=
+  jmx-manager-ssl-keystore-type=
+  jmx-manager-ssl-protocols=any
+  jmx-manager-ssl-require-authentication=true
+  jmx-manager-ssl-truststore=
+  jmx-manager-ssl-truststore-password=
+  jmx-manager-start=false
+  jmx-manager-update-rate=2000
+  load-cluster-configuration-from-dir=false
+  locator-wait-time=0
+  log-disk-space-limit=0
+  log-file-size-limit=0
+  max-num-reconnect-tries=3
+  max-wait-time-reconnect=60000
+  mcast-address=239.192.81.1
+  mcast-flow-control=1048576, 0.25, 5000
+  mcast-recv-buffer-size=1048576
+  mcast-send-buffer-size=65535
+  mcast-ttl=32
+  member-timeout=5000
+  membership-port-range=1024-65535
+  memcached-bind-address=
+  memcached-port=0
+  memcached-protocol=ASCII
+  redundancy-zone=
+  remote-locators=
+  remove-unresponsive-client=false
+  roles=
+  security-=
+  security-client-accessor=
+  security-client-accessor-pp=
+  security-client-auth-init=
+  security-client-authenticator=
+  security-client-dhalgo=
+  security-log-file=
+  security-log-level=config
+  security-peer-auth-init=
+  security-peer-authenticator=
+  security-peer-verifymember-timeout=1000
+  server-bind-address=
+  server-ssl-ciphers=any
+  server-ssl-enabled=false
+  server-ssl-keystore=
+  server-ssl-keystore-password=
+  server-ssl-keystore-type=
+  server-ssl-protocols=any
+  server-ssl-require-authentication=true
+  server-ssl-truststore=
+  server-ssl-truststore-password=
+  socket-buffer-size=32768
+  socket-lease-time=60000
+  ssl-ciphers=any
+  ssl-enabled=false
+  ssl-protocols=any
+  ssl-require-authentication=true
+  start-locator=
+  tcp-port=0
+  udp-fragment-size=60000
+  udp-recv-buffer-size=1048576
+  udp-send-buffer-size=65535
+  user-command-packages=
+  
+
+[info 2015/07/31 17:18:57.350 EDT serverC <main> tid=0x1] GemFire P2P Listener started on  tcp:///192.168.98.158:28509
+
+[info 2015/07/31 17:18:57.428 EDT serverC <PingSender> tid=0x25] locator localhost(null)<v0>:10334 member address is 192.168.98.158(locatorA:5276:locator)<v0>:24336
+
+[info 2015/07/31 17:18:57.432 EDT serverC <PingSender> tid=0x25] locator localhost(null)<v0>:10335 member address is 192.168.98.158(locatorB:5288:locator)<v1>:48204
+
+[info 2015/07/31 17:18:57.433 EDT serverC <main> tid=0x1] Attempting to join distributed system whose membership coordinator is 192.168.98.158(locatorA:5276:locator)<v0>:24336 using membership ID 192.168.98.158(serverC:5324):52971
+
+[info 2015/07/31 17:18:57.593 EDT serverC <main> tid=0x1] Membership: lead member is now 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:18:57.600 EDT serverC <FD_SOCK Ping thread> tid=0x28] GemFire failure detection is now monitoring 192.168.98.158(locatorA:5276:locator)<v0>:24336
+
+[info 2015/07/31 17:18:57.601 EDT serverC <main> tid=0x1] Entered into membership with ID 192.168.98.158(serverC:5324)<v4>:52971.
+
+[info 2015/07/31 17:18:57.602 EDT serverC <main> tid=0x1] Starting DistributionManager 192.168.98.158(serverC:5324)<v4>:52971.  (took 262/ ms)
+
+[info 2015/07/31 17:18:57.603 EDT serverC <main> tid=0x1] Initial (membershipManager) view =  [192.168.98.158(locatorA:5276:locator)<v0>:24336, 192.168.98.158(locatorB:5288:locator)<v1>:48204, 192.168.98.158(serverA:5300)<v2>:14020{lead}, 192.168.98.158(serverB:5312)<v3>:14037, 192.168.98.158(serverC:5324)<v4>:52971]
+
+[info 2015/07/31 17:18:57.603 EDT serverC <main> tid=0x1] Admitting member <192.168.98.158(locatorA:5276:locator)<v0>:24336>. Now there are 1 non-admin member(s).
+
+[info 2015/07/31 17:18:57.603 EDT serverC <main> tid=0x1] Admitting member <192.168.98.158(locatorB:5288:locator)<v1>:48204>. Now there are 2 non-admin member(s).
+
+[info 2015/07/31 17:18:57.604 EDT serverC <main> tid=0x1] Admitting member <192.168.98.158(serverA:5300)<v2>:14020>. Now there are 3 non-admin member(s).
+
+[info 2015/07/31 17:18:57.604 EDT serverC <main> tid=0x1] Admitting member <192.168.98.158(serverB:5312)<v3>:14037>. Now there are 4 non-admin member(s).
+
+[info 2015/07/31 17:18:57.604 EDT serverC <main> tid=0x1] Admitting member <192.168.98.158(serverC:5324)<v4>:52971>. Now there are 5 non-admin member(s).
+
+[info 2015/07/31 17:18:57.627 EDT serverC <P2P message reader for 192.168.98.158(locatorA:5276:locator)<v0>:24336 shared unordered uid=6 port=56703> tid=0x2a] Member 192.168.98.158(locatorA:5276:locator)<v0>:24336 is equivalent or in the same redundancy zone.
+
+[info 2015/07/31 17:18:57.627 EDT serverC <P2P message reader for 192.168.98.158(serverA:5300)<v2>:14020 shared unordered uid=9 port=56708> tid=0x34] Member 192.168.98.158(serverA:5300)<v2>:14020 is equivalent or in the same redundancy zone.
+
+[info 2015/07/31 17:18:57.628 EDT serverC <P2P message reader for 192.168.98.158(serverB:5312)<v3>:14037 shared unordered uid=9 port=56709> tid=0x36] Member 192.168.98.158(serverB:5312)<v3>:14037 is equivalent or in the same redundancy zone.
+
+[info 2015/07/31 17:18:57.628 EDT serverC <P2P message reader for 192.168.98.158(locatorB:5288:locator)<v1>:48204 shared unordered uid=7 port=56710> tid=0x37] Member 192.168.98.158(locatorB:5288:locator)<v1>:48204 is equivalent or in the same redundancy zone.
+
+[severe 2015/07/31 17:18:57.697 EDT serverC <main> tid=0x1] Java version older than 1.7.0_72.
+
+[severe 2015/07/31 17:18:57.697 EDT serverC <main> tid=0x1] Minimum system requirements not met. Unexpected behavior may result in additional errors.
+
+[info 2015/07/31 17:18:57.749 EDT serverC <main> tid=0x1] Initializing region _monitoringRegion_192.168.98.158<v4>52971
+
+[info 2015/07/31 17:18:57.757 EDT serverC <main> tid=0x1] Region _monitoringRegion_192.168.98.158<v4>52971 requesting initial image from 192.168.98.158(locatorA:5276:locator)<v0>:24336
+
+[info 2015/07/31 17:18:57.760 EDT serverC <main> tid=0x1] _monitoringRegion_192.168.98.158<v4>52971 is done getting image from 192.168.98.158(locatorA:5276:locator)<v0>:24336. isDeltaGII is false
+
+[info 2015/07/31 17:18:57.761 EDT serverC <main> tid=0x1] Initialization of region _monitoringRegion_192.168.98.158<v4>52971 completed
+
+[info 2015/07/31 17:18:58.039 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : status cluster-config-service code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.044 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : create disk-store code null op=null
+
+[info 2015/07/31 17:18:58.045 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : compact disk-store code null op=null
+
+[info 2015/07/31 17:18:58.046 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : validate offline-disk-store code null op=null
+
+[info 2015/07/31 17:18:58.046 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : backup disk-store code null op=null
+
+[info 2015/07/31 17:18:58.047 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : list disk-stores code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.048 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : compact offline-disk-store code null op=null
+
+[info 2015/07/31 17:18:58.049 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : upgrade offline-disk-store code null op=null
+
+[info 2015/07/31 17:18:58.049 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : describe disk-store code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.050 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : revoke missing-disk-store code null op=null
+
+[info 2015/07/31 17:18:58.050 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : show missing-disk-stores code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.051 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : describe offline-disk-store code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.051 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : export offline-disk-store code null op=null
+
+[info 2015/07/31 17:18:58.053 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : alter disk-store code null op=null
+
+[info 2015/07/31 17:18:58.054 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : destroy disk-store code null op=null
+
+[info 2015/07/31 17:18:58.056 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : execute function code null op=null
+
+[info 2015/07/31 17:18:58.057 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : destroy function code null op=null
+
+[info 2015/07/31 17:18:58.057 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : list functions code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.059 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : export cluster-configuration code null op=null
+
+[info 2015/07/31 17:18:58.060 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : import cluster-configuration code null op=null
+
+[info 2015/07/31 17:18:58.060 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : list clients code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.060 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : describe client code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.062 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : create index code null op=null
+
+[info 2015/07/31 17:18:58.062 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : define index code null op=null
+
+[info 2015/07/31 17:18:58.063 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : create defined indexes code null op=null
+
+[info 2015/07/31 17:18:58.063 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : clear defined indexes code null op=null
+
+[info 2015/07/31 17:18:58.064 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : list indexes code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.064 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : destroy index code null op=null
+
+[info 2015/07/31 17:18:58.068 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : alter region code null op=null
+
+[info 2015/07/31 17:18:58.068 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : destroy region code null op=null
+
+[info 2015/07/31 17:18:58.074 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : create region code null op=null
+
+[info 2015/07/31 17:18:58.074 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : list members code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.075 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : describe member code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.075 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : pdx rename code null op=null
+
+[info 2015/07/31 17:18:58.077 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : configure pdx code null op=null
+
+[info 2015/07/31 17:18:58.078 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : list regions code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.079 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : describe region code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.082 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : remove code null op=null
+
+[info 2015/07/31 17:18:58.083 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : get code null op=null
+
+[info 2015/07/31 17:18:58.085 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : put code PUT op=@com.gemstone.gemfire.management.internal.security.ResourceOperation(label=, operation=PUT, resource=REGION)
+
+[info 2015/07/31 17:18:58.087 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : query code QUERYDATA_DS op=@com.gemstone.gemfire.management.internal.security.ResourceOperation(label=, operation=QUERYDATA_DS, resource=DISTRIBUTED_SYSTEM)
+
+[info 2015/07/31 17:18:58.088 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : rebalance code REBALANCE op=@com.gemstone.gemfire.management.internal.security.ResourceOperation(label=, operation=REBALANCE, resource=DISTRIBUTED_SYSTEM)
+
+[info 2015/07/31 17:18:58.088 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : export data code EXPORT_DATA op=@com.gemstone.gemfire.management.internal.security.ResourceOperation(label=, operation=EXPORT_DATA, resource=REGION)
+
+[info 2015/07/31 17:18:58.089 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : import data code IMPORT_DATA op=@com.gemstone.gemfire.management.internal.security.ResourceOperation(label=, operation=IMPORT_DATA, resource=REGION)
+
+[info 2015/07/31 17:18:58.090 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : locate entry code LOCATE_ENTRY op=@com.gemstone.gemfire.management.internal.security.ResourceOperation(label=, operation=LOCATE_ENTRY, resource=REGION)
+
+[info 2015/07/31 17:18:58.094 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : create gateway-sender code null op=null
+
+[info 2015/07/31 17:18:58.095 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : start gateway-sender code null op=null
+
+[info 2015/07/31 17:18:58.096 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : pause gateway-sender code null op=null
+
+[info 2015/07/31 17:18:58.097 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : resume gateway-sender code null op=null
+
+[info 2015/07/31 17:18:58.098 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : stop gateway-sender code null op=null
+
+[info 2015/07/31 17:18:58.099 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : create gateway-receiver code null op=null
+
+[info 2015/07/31 17:18:58.100 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : load-balance gateway-sender code null op=null
+
+[info 2015/07/31 17:18:58.100 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : start gateway-receiver code null op=null
+
+[info 2015/07/31 17:18:58.101 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : stop gateway-receiver code null op=null
+
+[info 2015/07/31 17:18:58.102 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : list gateways code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.102 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : status gateway-sender code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.103 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : status gateway-receiver code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.104 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : status locator code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.110 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : start server code null op=null
+
+[info 2015/07/31 17:18:58.111 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : stop server code null op=null
+
+[info 2015/07/31 17:18:58.114 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : start locator code null op=null
+
+[info 2015/07/31 17:18:58.114 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : stop locator code null op=null
+
+[info 2015/07/31 17:18:58.115 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : status server code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.116 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : start jconsole code null op=null
+
+[info 2015/07/31 17:18:58.116 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : start jvisualvm code null op=null
+
+[info 2015/07/31 17:18:58.117 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : start pulse code null op=null
+
+[info 2015/07/31 17:18:58.117 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : start vsd code null op=null
+
+[info 2015/07/31 17:18:58.119 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : export config code null op=null
+
+[info 2015/07/31 17:18:58.122 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : alter runtime code null op=null
+
+[info 2015/07/31 17:18:58.122 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : describe config code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.125 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : create async-event-queue code null op=null
+
+[info 2015/07/31 17:18:58.125 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : list async-event-queues code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.126 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : show subscription-queue-size code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.127 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : list durable-cqs code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.127 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : close durable-client code null op=null
+
+[info 2015/07/31 17:18:58.128 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : close durable-cq code null op=null
+
+[info 2015/07/31 17:18:58.129 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : exit code null op=null
+
+[info 2015/07/31 17:18:58.130 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : debug code null op=null
+
+[info 2015/07/31 17:18:58.130 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : sleep code null op=null
+
+[info 2015/07/31 17:18:58.130 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : version code null op=null
+
+[info 2015/07/31 17:18:58.132 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : connect code null op=null
+
+[info 2015/07/31 17:18:58.133 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : history code null op=null
+
+[info 2015/07/31 17:18:58.133 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : disconnect code null op=null
+
+[info 2015/07/31 17:18:58.134 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : set variable code null op=null
+
+[info 2015/07/31 17:18:58.136 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : sh code null op=null
+
+[info 2015/07/31 17:18:58.136 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : describe connection code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.136 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : echo code null op=null
+
+[info 2015/07/31 17:18:58.137 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : run code null op=null
+
+[info 2015/07/31 17:18:58.138 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : encrypt password code null op=null
+
+[info 2015/07/31 17:18:58.138 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : hint code null op=null
+
+[info 2015/07/31 17:18:58.138 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : help code null op=null
+
+[info 2015/07/31 17:18:58.141 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : deploy code null op=null
+
+[info 2015/07/31 17:18:58.142 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : undeploy code null op=null
+
+[info 2015/07/31 17:18:58.142 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : list deployed code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.143 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : shutdown code SHUTDOWN_DS op=@com.gemstone.gemfire.management.internal.security.ResourceOperation(label=, operation=SHUTDOWN_DS, resource=DISTRIBUTED_SYSTEM)
+
+[info 2015/07/31 17:18:58.155 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : gc code null op=null
+
+[info 2015/07/31 17:18:58.156 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : show log code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.156 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : netstat code null op=null
+
+[info 2015/07/31 17:18:58.157 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : show dead-locks code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.158 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : export logs code null op=null
+
+[info 2015/07/31 17:18:58.158 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : export stack-traces code null op=null
+
+[info 2015/07/31 17:18:58.159 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : show metrics code LIST_DS op=null
+
+[info 2015/07/31 17:18:58.160 EDT serverC <main> tid=0x1] #RegisterCommandSecurity : change loglevel code CHANGE_ALERT_LEVEL_DS op=@com.gemstone.gemfire.management.internal.security.ResourceOperation(label=, operation=CHANGE_ALERT_LEVEL_DS, resource=DISTRIBUTED_SYSTEM)
+
+[info 2015/07/31 17:18:58.395 EDT serverC <main> tid=0x1] The cache has been created with "use-cluster-configuration=false". It will not receive any cluster configuration
+
+[info 2015/07/31 17:18:58.405 EDT serverC <main> tid=0x1] Initializing region PdxTypes
+
+[info 2015/07/31 17:18:58.412 EDT serverC <main> tid=0x1] Region PdxTypes requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:18:58.414 EDT serverC <main> tid=0x1] PdxTypes is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:18:58.414 EDT serverC <main> tid=0x1] Initialization of region PdxTypes completed
+
+[info 2015/07/31 17:18:58.418 EDT serverC <main> tid=0x1] Attempting to start HTTP service on port (8083) at bind-address ()...
+
+[info 2015/07/31 17:18:58.418 EDT serverC <main> tid=0x1] Unable to find GemFire Developer REST API WAR file; the Developer REST API for GemFire will not be exported and accessible.
+
+[info 2015/07/31 17:18:58.418 EDT serverC <main> tid=0x1] Initializing region __ParameterizedQueries__
+
+[info 2015/07/31 17:18:58.421 EDT serverC <main> tid=0x1] Region __ParameterizedQueries__ requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:18:58.422 EDT serverC <main> tid=0x1] __ParameterizedQueries__ is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:18:58.422 EDT serverC <main> tid=0x1] Initialization of region __ParameterizedQueries__ completed
+
+[info 2015/07/31 17:18:58.424 EDT serverC <main> tid=0x1] Connected to Distributed System [serverC] as Member [192.168.98.158(serverC:5324)<v4>:52971] on Host [192.168.98.158].
+
+[info 2015/07/31 17:18:58.424 EDT serverC <main> tid=0x1] Created new GemFire v.1.0.0.0-SNAPSHOT Cache [serverC].
+
+[info 2015/07/31 17:18:58.425 EDT serverC <main> tid=0x1] Overriding MemoryPoolMXBean heap threshold bytes 0 on pool PS Old Gen with 152,410,521
+
+[info 2015/07/31 17:18:58.425 EDT serverC <main> tid=0x1] Overriding MemoryPoolMXBean heap threshold bytes 0 on pool PS Old Gen with 152,410,521
+
+[warning 2015/07/31 17:18:58.486 EDT serverC <main> tid=0x1] For region Transaction with data policy PARTITION, memory LRU eviction attribute "maximum" has been reset from 512MB to local-max-memory 221MB
+
+[info 2015/07/31 17:18:58.503 EDT serverC <main> tid=0x1] Initializing region __PR
+
+[info 2015/07/31 17:18:58.507 EDT serverC <main> tid=0x1] Region __PR requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:18:58.519 EDT serverC <main> tid=0x1] __PR is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:18:58.519 EDT serverC <main> tid=0x1] Initialization of region __PR completed
+
+[info 2015/07/31 17:18:58.534 EDT serverC <main> tid=0x1] Partitioned Region /Transaction is created with prId=1
+
+[info 2015/07/31 17:18:58.567 EDT serverC <main> tid=0x1] Created new Cache Region [Transaction].
+
+[info 2015/07/31 17:18:58.601 EDT serverC <main> tid=0x1] Initializing region Product
+
+[info 2015/07/31 17:18:58.607 EDT serverC <main> tid=0x1] Region Product requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:18:58.610 EDT serverC <main> tid=0x1] Product is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:18:58.610 EDT serverC <main> tid=0x1] Initialization of region Product completed
+
+[info 2015/07/31 17:18:58.612 EDT serverC <main> tid=0x1] Created new Cache Region [Product].
+
+[info 2015/07/31 17:18:58.649 EDT serverC <main> tid=0x1] Loaded JDBC driver: org.apache.derby.jdbc.ClientDriver
+
+[info 2015/07/31 17:18:58.726 EDT serverC <main> tid=0x1] Partitioned Region /Alert is created with prId=2
+
+[info 2015/07/31 17:18:58.733 EDT serverC <main> tid=0x1] Created new Cache Region [Alert].
+
+[info 2015/07/31 17:18:58.738 EDT serverC <main> tid=0x1] Initializing region Customer
+
+[info 2015/07/31 17:18:58.741 EDT serverC <main> tid=0x1] Region Customer requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:18:58.742 EDT serverC <main> tid=0x1] Customer is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:18:58.742 EDT serverC <main> tid=0x1] Initialization of region Customer completed
+
+[info 2015/07/31 17:18:58.744 EDT serverC <main> tid=0x1] Created new Cache Region [Customer].
+
+[info 2015/07/31 17:18:58.749 EDT serverC <main> tid=0x1] Initializing region MarkUp
+
+[info 2015/07/31 17:18:58.753 EDT serverC <main> tid=0x1] Region MarkUp requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:18:58.754 EDT serverC <main> tid=0x1] MarkUp is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:18:58.754 EDT serverC <main> tid=0x1] Initialization of region MarkUp completed
+
+[info 2015/07/31 17:18:58.756 EDT serverC <main> tid=0x1] Created new Cache Region [MarkUp].
+
+[info 2015/07/31 17:18:58.834 EDT serverC <main> tid=0x1] Sending removeIndex message to all the participating prs.
+
+[info 2015/07/31 17:18:58.837 EDT serverC <main> tid=0x1] Done wating for remove index...
+
+[info 2015/07/31 17:18:58.858 EDT serverC <main> tid=0x1] Created index locally, sending index creation message to all members, and will be waiting for response Index [ Name=customerTransactionIndex Type =FUNCTIONAL IdxExp=customerId From=/Transaction Proj=*]imports : null.
+
+[info 2015/07/31 17:18:58.930 EDT serverC <main> tid=0x1] Starting beans in phase 2147483647
+
+[info 2015/07/31 17:18:58.932 EDT serverC <main> tid=0x1] Bridge server connection listener bound to address 0.0.0.0/0.0.0.0:56725 with backlog 1,000.
+
+[info 2015/07/31 17:18:58.937 EDT serverC <main> tid=0x1] ClientHealthMonitorThread maximum allowed time between pings: 60,000
+
+[info 2015/07/31 17:18:58.948 EDT serverC <main> tid=0x1] CacheServer Configuration:   port=56725 max-connections=800 max-threads=0 notify-by-subscription=true socket-buffer-size=32768 maximum-time-between-pings=60000 maximum-message-count=230000 message-time-to-live=180 eviction-policy=none capacity=1 overflow directory=. groups=[] loadProbe=ConnectionCountProbe loadPollInterval=5000 tcpNoDelay=true
+
+[info 2015/07/31 17:19:02.840 EDT serverC <UDP ucast receiver> tid=0x21] Membership: received new view  [192.168.98.158(locatorA:5276:locator)<v0>:24336|5] [192.168.98.158(locatorA:5276:locator)<v0>:24336/59763, 192.168.98.158(locatorB:5288:locator)<v1>:48204/41278, 192.168.98.158(serverA:5300)<v2>:14020/53563, 192.168.98.158(serverB:5312)<v3>:14037/29745, 192.168.98.158(serverC:5324)<v4>:52971/28509, 192.168.98.158(serverD:5337)<v5>:42746/50237]
+
+[info 2015/07/31 17:19:02.844 EDT serverC <FD_SOCK Ping thread> tid=0x28] GemFire failure detection is now monitoring 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:02.844 EDT serverC <View Message Processor> tid=0x5d] Membership: Processing addition < 192.168.98.158(serverD:5337)<v5>:42746 >
+
+[info 2015/07/31 17:19:02.844 EDT serverC <View Message Processor> tid=0x5d] Admitting member <192.168.98.158(serverD:5337)<v5>:42746>. Now there are 6 non-admin member(s).
+
+[info 2015/07/31 17:19:02.871 EDT serverC <Pooled High Priority Message Processor 2> tid=0x46] Member 192.168.98.158(serverD:5337)<v5>:42746 is equivalent or in the same redundancy zone.
+
+[info 2015/07/31 17:19:04.091 EDT serverC <PartitionedRegion Message Processor1> tid=0x4f] Trying to get pr with id :  1
+
+[info 2015/07/31 17:19:04.092 EDT serverC <PartitionedRegion Message Processor1> tid=0x4f] Remove indexes message got the pr  Partitioned Region @77cde806 [path='/Transaction'; dataPolicy=PARTITION; prId=1; isDestroyed=false; isClosed=false; retryTimeout=3600000; serialNumber=8; partition attributes=PartitionAttributes@487271366[redundantCopies=1;localMaxMemory=221;totalMaxMemory=2147483647;totalNumBuckets=113;partitionResolver=null;colocatedWith=null;recoveryDelay=-1;startupRecoveryDelay=0;FixedPartitionAttributes=null;partitionListeners=null]; on VM 192.168.98.158(serverC:5324)<v4>:52971]
+
+[info 2015/07/31 17:19:04.092 EDT serverC <PartitionedRegion Message Processor1> tid=0x4f] Will remove the indexes on this pr :  Partitioned Region @77cde806 [path='/Transaction'; dataPolicy=PARTITION; prId=1; isDestroyed=false; isClosed=false; retryTimeout=3600000; serialNumber=8; partition attributes=PartitionAttributes@487271366[redundantCopies=1;localMaxMemory=221;totalMaxMemory=2147483647;totalNumBuckets=113;partitionResolver=null;colocatedWith=null;recoveryDelay=-1;startupRecoveryDelay=0;FixedPartitionAttributes=null;partitionListeners=null]; on VM 192.168.98.158(serverC:5324)<v4>:52971]
+
+[info 2015/07/31 17:19:10.520 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_51
+
+[info 2015/07/31 17:19:10.523 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:10.523 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_51
+
+[info 2015/07/31 17:19:10.526 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_51 completed
+
+[info 2015/07/31 17:19:10.644 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_49
+
+[info 2015/07/31 17:19:10.644 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:10.644 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_49
+
+[info 2015/07/31 17:19:10.646 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Transaction_49 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:10.647 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Transaction_49 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:10.647 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_49 completed
+
+[info 2015/07/31 17:19:10.670 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_54
+
+[info 2015/07/31 17:19:10.670 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:10.670 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_54
+
+[info 2015/07/31 17:19:10.671 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_54 completed
+
+[info 2015/07/31 17:19:10.703 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_52
+
+[info 2015/07/31 17:19:10.703 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:10.703 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_52
+
+[info 2015/07/31 17:19:10.706 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_52 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:10.706 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_52 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:10.706 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_52 completed
+
+[info 2015/07/31 17:19:10.727 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_56
+
+[info 2015/07/31 17:19:10.727 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:10.727 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_56
+
+[info 2015/07/31 17:19:10.729 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_56 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:10.730 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_56 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:10.731 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_56 completed
+
+[info 2015/07/31 17:19:10.762 EDT serverC <P2P message reader for 192.168.98.158(serverA:5300)<v2>:14020 unshared ordered uid=20 dom #1 port=56797> tid=0x6c] Auto serializer generating type for class org.apache.geode.demo.fastfootshoes.model.Transaction for fields: 
+      transactionDate: private java.util.Date org.apache.geode.demo.fastfootshoes.model.Transaction.transactionDate
+      quantity: private int org.apache.geode.demo.fastfootshoes.model.Transaction.quantity
+      retailPrice: private double org.apache.geode.demo.fastfootshoes.model.Transaction.retailPrice
+      markUp: private double org.apache.geode.demo.fastfootshoes.model.Transaction.markUp
+      customerId: private java.lang.String org.apache.geode.demo.fastfootshoes.model.Transaction.customerId
+      productId: private java.lang.String org.apache.geode.demo.fastfootshoes.model.Transaction.productId
+      orderStatus: private java.lang.String org.apache.geode.demo.fastfootshoes.model.Transaction.orderStatus
+      id: private java.lang.String org.apache.geode.demo.fastfootshoes.model.Transaction.id
+  
+
+[info 2015/07/31 17:19:10.860 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_107
+
+[info 2015/07/31 17:19:10.860 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:10.860 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_107
+
+[info 2015/07/31 17:19:10.861 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_107 completed
+
+[info 2015/07/31 17:19:10.874 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_105
+
+[info 2015/07/31 17:19:10.874 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:10.874 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_105
+
+[info 2015/07/31 17:19:10.875 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_105 completed
+
+[info 2015/07/31 17:19:10.917 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_104
+
+[info 2015/07/31 17:19:10.917 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:10.918 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_104
+
+[info 2015/07/31 17:19:10.920 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_104 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:10.920 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_104 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:10.920 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_104 completed
+
+[info 2015/07/31 17:19:10.925 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_101
+
+[info 2015/07/31 17:19:10.925 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:10.925 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_101
+
+[info 2015/07/31 17:19:10.926 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_101 completed
+
+[info 2015/07/31 17:19:10.968 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_100
+
+[info 2015/07/31 17:19:10.969 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:10.969 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_100
+
+[info 2015/07/31 17:19:10.971 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Transaction_100 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:10.972 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Transaction_100 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:10.972 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_100 completed
+
+[info 2015/07/31 17:19:11.021 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_47
+
+[info 2015/07/31 17:19:11.021 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.022 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_47
+
+[info 2015/07/31 17:19:11.022 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_47 completed
+
+[info 2015/07/31 17:19:11.051 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_19
+
+[info 2015/07/31 17:19:11.051 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.051 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_19
+
+[info 2015/07/31 17:19:11.054 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_19 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:11.054 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_19 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.054 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_19 completed
+
+[info 2015/07/31 17:19:11.072 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_21
+
+[info 2015/07/31 17:19:11.073 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.073 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_21
+
+[info 2015/07/31 17:19:11.074 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_21 completed
+
+[info 2015/07/31 17:19:11.089 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_22
+
+[info 2015/07/31 17:19:11.090 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.090 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_22
+
+[info 2015/07/31 17:19:11.092 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Transaction_22 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:11.093 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Transaction_22 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.093 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_22 completed
+
+[info 2015/07/31 17:19:11.127 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_25
+
+[info 2015/07/31 17:19:11.128 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.128 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_25
+
+[info 2015/07/31 17:19:11.130 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Transaction_25 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:11.131 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Transaction_25 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.131 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_25 completed
+
+[info 2015/07/31 17:19:11.180 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_78
+
+[info 2015/07/31 17:19:11.180 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.180 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_78
+
+[info 2015/07/31 17:19:11.181 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_78 completed
+
+[info 2015/07/31 17:19:11.228 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_87
+
+[info 2015/07/31 17:19:11.228 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.228 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_87
+
+[info 2015/07/31 17:19:11.229 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_87 completed
+
+[info 2015/07/31 17:19:11.272 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_81
+
+[info 2015/07/31 17:19:11.272 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.273 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_81
+
+[info 2015/07/31 17:19:11.275 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Transaction_81 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:11.276 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Transaction_81 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.276 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_81 completed
+
+[info 2015/07/31 17:19:11.303 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_85
+
+[info 2015/07/31 17:19:11.303 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.303 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_85
+
+[info 2015/07/31 17:19:11.304 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_85 completed
+
+[info 2015/07/31 17:19:11.318 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_79
+
+[info 2015/07/31 17:19:11.318 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.318 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_79
+
+[info 2015/07/31 17:19:11.320 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_79 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:11.321 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_79 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.321 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_79 completed
+
+[info 2015/07/31 17:19:11.338 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_109
+
+[info 2015/07/31 17:19:11.338 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.338 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_109
+
+[info 2015/07/31 17:19:11.339 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_109 completed
+
+[info 2015/07/31 17:19:11.388 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_5
+
+[info 2015/07/31 17:19:11.389 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.389 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_5
+
+[info 2015/07/31 17:19:11.391 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Transaction_5 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:11.392 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Transaction_5 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.392 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_5 completed
+
+[info 2015/07/31 17:19:11.409 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_3
+
+[info 2015/07/31 17:19:11.409 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.409 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_3
+
+[info 2015/07/31 17:19:11.410 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_3 completed
+
+[info 2015/07/31 17:19:11.447 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_110
+
+[info 2015/07/31 17:19:11.447 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.447 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_110
+
+[info 2015/07/31 17:19:11.449 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_110 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:11.449 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_110 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.450 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_110 completed
+
+[info 2015/07/31 17:19:11.470 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_112
+
+[info 2015/07/31 17:19:11.470 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.470 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_112
+
+[info 2015/07/31 17:19:11.473 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_112 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:11.473 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_112 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.474 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_112 completed
+
+[info 2015/07/31 17:19:11.482 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_0
+
+[info 2015/07/31 17:19:11.482 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.482 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_0
+
+[info 2015/07/31 17:19:11.484 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_0 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:11.485 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_0 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.485 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_0 completed
+
+[info 2015/07/31 17:19:11.488 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_27
+
+[info 2015/07/31 17:19:11.489 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.489 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_27
+
+[info 2015/07/31 17:19:11.490 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_27 completed
+
+[info 2015/07/31 17:19:11.529 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_34
+
+[info 2015/07/31 17:19:11.530 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.530 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_34
+
+[info 2015/07/31 17:19:11.531 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_34 completed
+
+[info 2015/07/31 17:19:11.582 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_31
+
+[info 2015/07/31 17:19:11.582 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.582 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_31
+
+[info 2015/07/31 17:19:11.584 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_31 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:11.585 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_31 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.585 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_31 completed
+
+[info 2015/07/31 17:19:11.589 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_58
+
+[info 2015/07/31 17:19:11.590 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.590 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_58
+
+[info 2015/07/31 17:19:11.591 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_58 completed
+
+[info 2015/07/31 17:19:11.638 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_28
+
+[info 2015/07/31 17:19:11.639 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.639 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_28
+
+[info 2015/07/31 17:19:11.641 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Transaction_28 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:11.641 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Transaction_28 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.641 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_28 completed
+
+[info 2015/07/31 17:19:11.672 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_67
+
+[info 2015/07/31 17:19:11.672 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.672 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_67
+
+[info 2015/07/31 17:19:11.673 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_67 completed
+
+[info 2015/07/31 17:19:11.709 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_89
+
+[info 2015/07/31 17:19:11.709 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.709 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_89
+
+[info 2015/07/31 17:19:11.710 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_89 completed
+
+[info 2015/07/31 17:19:11.745 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_61
+
+[info 2015/07/31 17:19:11.746 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.746 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_61
+
+[info 2015/07/31 17:19:11.748 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Transaction_61 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:11.748 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Transaction_61 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.748 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_61 completed
+
+[info 2015/07/31 17:19:11.752 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_62
+
+[info 2015/07/31 17:19:11.753 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.753 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_62
+
+[info 2015/07/31 17:19:11.753 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_62 completed
+
+[info 2015/07/31 17:19:11.779 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_64
+
+[info 2015/07/31 17:19:11.779 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.779 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_64
+
+[info 2015/07/31 17:19:11.781 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_64 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:11.782 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_64 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.782 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_64 completed
+
+[info 2015/07/31 17:19:11.817 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_96
+
+[info 2015/07/31 17:19:11.817 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.817 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_96
+
+[info 2015/07/31 17:19:11.819 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_96 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:11.820 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_96 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.820 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_96 completed
+
+[info 2015/07/31 17:19:11.825 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_97
+
+[info 2015/07/31 17:19:11.826 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.826 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_97
+
+[info 2015/07/31 17:19:11.827 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_97 completed
+
+[info 2015/07/31 17:19:11.858 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_92
+
+[info 2015/07/31 17:19:11.858 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.858 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_92
+
+[info 2015/07/31 17:19:11.859 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_92 completed
+
+[info 2015/07/31 17:19:11.886 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_94
+
+[info 2015/07/31 17:19:11.887 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.887 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_94
+
+[info 2015/07/31 17:19:11.889 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_94 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:11.890 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_94 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.890 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_94 completed
+
+[info 2015/07/31 17:19:11.909 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_90
+
+[info 2015/07/31 17:19:11.909 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.909 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_90
+
+[info 2015/07/31 17:19:11.911 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_90 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:11.912 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_90 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.912 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_90 completed
+
+[info 2015/07/31 17:19:11.940 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_15
+
+[info 2015/07/31 17:19:11.940 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.940 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_15
+
+[info 2015/07/31 17:19:11.941 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_15 completed
+
+[info 2015/07/31 17:19:11.979 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_12
+
+[info 2015/07/31 17:19:11.980 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.980 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_12
+
+[info 2015/07/31 17:19:11.982 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Transaction_12 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:11.982 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Transaction_12 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:11.983 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_12 completed
+
+[info 2015/07/31 17:19:11.998 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_10
+
+[info 2015/07/31 17:19:11.998 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:11.999 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_10
+
+[info 2015/07/31 17:19:11.999 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_10 completed
+
+[info 2015/07/31 17:19:12.058 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_44
+
+[info 2015/07/31 17:19:12.058 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:12.059 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_44
+
+[info 2015/07/31 17:19:12.060 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_44 completed
+
+[info 2015/07/31 17:19:12.091 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_41
+
+[info 2015/07/31 17:19:12.091 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:12.091 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_41
+
+[info 2015/07/31 17:19:12.092 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_41 completed
+
+[info 2015/07/31 17:19:12.119 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_39
+
+[info 2015/07/31 17:19:12.119 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:12.120 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_39
+
+[info 2015/07/31 17:19:12.121 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_39 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:12.122 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_39 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:12.122 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_39 completed
+
+[info 2015/07/31 17:19:12.129 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_38
+
+[info 2015/07/31 17:19:12.129 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:12.129 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_38
+
+[info 2015/07/31 17:19:12.131 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_38 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:12.132 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_38 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:12.132 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_38 completed
+
+[info 2015/07/31 17:19:12.169 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_68
+
+[info 2015/07/31 17:19:12.169 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:12.170 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Initializing region _B__Transaction_68
+
+[info 2015/07/31 17:19:12.171 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Initialization of region _B__Transaction_68 completed
+
+[info 2015/07/31 17:19:12.198 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_70
+
+[info 2015/07/31 17:19:12.198 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:12.198 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Initializing region _B__Transaction_70
+
+[info 2015/07/31 17:19:12.200 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Region _B__Transaction_70 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:12.200 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] _B__Transaction_70 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:12.201 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Initialization of region _B__Transaction_70 completed
+
+[info 2015/07/31 17:19:12.205 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_71
+
+[info 2015/07/31 17:19:12.205 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:12.205 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Initializing region _B__Transaction_71
+
+[info 2015/07/31 17:19:12.206 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Initialization of region _B__Transaction_71 completed
+
+[info 2015/07/31 17:19:12.251 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_75
+
+[info 2015/07/31 17:19:12.251 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:12.252 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Initializing region _B__Transaction_75
+
+[info 2015/07/31 17:19:12.254 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Region _B__Transaction_75 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:12.254 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] _B__Transaction_75 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:12.254 EDT serverC <ServerConnection on port 56725 Thread 0> tid=0x76] Initialization of region _B__Transaction_75 completed
+
+[info 2015/07/31 17:19:12.299 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_46
+
+[info 2015/07/31 17:19:12.299 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:12.299 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_46
+
+[info 2015/07/31 17:19:12.301 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_46 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:12.301 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_46 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:12.301 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_46 completed
+
+[info 2015/07/31 17:19:12.314 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_77
+
+[info 2015/07/31 17:19:12.314 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:12.314 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_77
+
+[info 2015/07/31 17:19:12.315 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_77 completed
+
+[info 2015/07/31 17:19:12.353 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_26
+
+[info 2015/07/31 17:19:12.353 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:12.353 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Transaction_26
+
+[info 2015/07/31 17:19:12.354 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Transaction_26 completed
+
+[info 2015/07/31 17:19:12.442 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Using Compact Range index implementation for 'customerTransactionIndex' on region /__PR/_B__Transaction_76
+
+[info 2015/07/31 17:19:12.443 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialized and loaded entries into the index 
+
+[info 2015/07/31 17:19:12.443 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Transaction_76
+
+[info 2015/07/31 17:19:12.445 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Transaction_76 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:12.445 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Transaction_76 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:12.445 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Transaction_76 completed
+
+[info 2015/07/31 17:19:18.720 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_0
+
+[info 2015/07/31 17:19:18.721 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_0 completed
+
+[info 2015/07/31 17:19:18.737 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_2
+
+[info 2015/07/31 17:19:18.739 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_2 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:18.739 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_2 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:18.739 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_2 completed
+
+[info 2015/07/31 17:19:18.757 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_5
+
+[info 2015/07/31 17:19:18.758 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_5 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:18.759 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_5 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:18.759 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_5 completed
+
+[info 2015/07/31 17:19:18.761 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_6
+
+[info 2015/07/31 17:19:18.762 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_6 completed
+
+[info 2015/07/31 17:19:18.781 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_9
+
+[info 2015/07/31 17:19:18.781 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_9 completed
+
+[info 2015/07/31 17:19:18.802 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_12
+
+[info 2015/07/31 17:19:18.803 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_12 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:18.803 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_12 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:18.804 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_12 completed
+
+[info 2015/07/31 17:19:18.814 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_14
+
+[info 2015/07/31 17:19:18.815 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_14 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:18.816 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_14 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:18.816 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_14 completed
+
+[info 2015/07/31 17:19:18.818 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_15
+
+[info 2015/07/31 17:19:18.819 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_15 completed
+
+[info 2015/07/31 17:19:18.834 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_17
+
+[info 2015/07/31 17:19:18.836 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_17 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:18.836 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_17 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:18.836 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_17 completed
+
+[info 2015/07/31 17:19:18.839 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_18
+
+[info 2015/07/31 17:19:18.839 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_18 completed
+
+[info 2015/07/31 17:19:18.857 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_21
+
+[info 2015/07/31 17:19:18.858 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_21 completed
+
+[info 2015/07/31 17:19:18.872 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_23
+
+[info 2015/07/31 17:19:18.873 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_23 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:18.874 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_23 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:18.874 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_23 completed
+
+[info 2015/07/31 17:19:18.891 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_26
+
+[info 2015/07/31 17:19:18.892 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_26 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:18.893 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_26 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:18.893 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_26 completed
+
+[info 2015/07/31 17:19:18.895 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_27
+
+[info 2015/07/31 17:19:18.895 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_27 completed
+
+[info 2015/07/31 17:19:18.916 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_30
+
+[info 2015/07/31 17:19:18.917 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Alert_30 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:18.917 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Alert_30 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:18.917 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_30 completed
+
+[info 2015/07/31 17:19:18.920 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_31
+
+[info 2015/07/31 17:19:18.920 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_31 completed
+
+[info 2015/07/31 17:19:18.933 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_33
+
+[info 2015/07/31 17:19:18.935 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_33 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:18.935 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_33 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:18.935 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_33 completed
+
+[info 2015/07/31 17:19:18.940 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_34
+
+[info 2015/07/31 17:19:18.942 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_34 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:18.942 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_34 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:18.942 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_34 completed
+
+[info 2015/07/31 17:19:18.945 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_35
+
+[info 2015/07/31 17:19:18.945 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_35 completed
+
+[info 2015/07/31 17:19:18.963 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_38
+
+[info 2015/07/31 17:19:18.964 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_38 completed
+
+[info 2015/07/31 17:19:18.979 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_40
+
+[info 2015/07/31 17:19:18.980 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_40 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:18.981 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_40 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:18.981 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_40 completed
+
+[info 2015/07/31 17:19:18.983 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_41
+
+[info 2015/07/31 17:19:18.984 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_41 completed
+
+[info 2015/07/31 17:19:19.016 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_46
+
+[info 2015/07/31 17:19:19.017 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_46 completed
+
+[info 2015/07/31 17:19:19.027 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_47
+
+[info 2015/07/31 17:19:19.029 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_47 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:19.029 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_47 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.029 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_47 completed
+
+[info 2015/07/31 17:19:19.041 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_49
+
+[info 2015/07/31 17:19:19.042 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_49 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:19.042 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_49 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.043 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_49 completed
+
+[info 2015/07/31 17:19:19.045 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_50
+
+[info 2015/07/31 17:19:19.046 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_50 completed
+
+[info 2015/07/31 17:19:19.067 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_53
+
+[info 2015/07/31 17:19:19.068 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Alert_53 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:19.069 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Alert_53 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.069 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_53 completed
+
+[info 2015/07/31 17:19:19.071 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_54
+
+[info 2015/07/31 17:19:19.072 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_54 completed
+
+[info 2015/07/31 17:19:19.084 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_56
+
+[info 2015/07/31 17:19:19.085 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_56 completed
+
+[info 2015/07/31 17:19:19.106 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_59
+
+[info 2015/07/31 17:19:19.107 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_59 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:19.108 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_59 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.108 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_59 completed
+
+[info 2015/07/31 17:19:19.113 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_60
+
+[info 2015/07/31 17:19:19.114 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_60 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:19.115 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_60 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.115 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_60 completed
+
+[info 2015/07/31 17:19:19.127 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_62
+
+[info 2015/07/31 17:19:19.128 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_62 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:19.129 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_62 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.129 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_62 completed
+
+[info 2015/07/31 17:19:19.131 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_63
+
+[info 2015/07/31 17:19:19.132 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_63 completed
+
+[info 2015/07/31 17:19:19.142 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_65
+
+[info 2015/07/31 17:19:19.143 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_65 completed
+
+[info 2015/07/31 17:19:19.179 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_70
+
+[info 2015/07/31 17:19:19.180 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_70 completed
+
+[info 2015/07/31 17:19:19.190 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_71
+
+[info 2015/07/31 17:19:19.192 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_71 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:19.193 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_71 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.193 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_71 completed
+
+[info 2015/07/31 17:19:19.215 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_74
+
+[info 2015/07/31 17:19:19.217 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_74 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:19.218 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_74 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.218 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_74 completed
+
+[info 2015/07/31 17:19:19.221 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_75
+
+[info 2015/07/31 17:19:19.222 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_75 completed
+
+[info 2015/07/31 17:19:19.239 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_77
+
+[info 2015/07/31 17:19:19.240 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_77 completed
+
+[info 2015/07/31 17:19:19.259 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_79
+
+[info 2015/07/31 17:19:19.260 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Alert_79 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:19.261 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Alert_79 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.261 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_79 completed
+
+[info 2015/07/31 17:19:19.272 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_81
+
+[info 2015/07/31 17:19:19.273 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_81 completed
+
+[info 2015/07/31 17:19:19.286 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_82
+
+[info 2015/07/31 17:19:19.289 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_82 requesting initial image from 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 17:19:19.289 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_82 is done getting image from 192.168.98.158(serverB:5312)<v3>:14037. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.290 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_82 completed
+
+[info 2015/07/31 17:19:19.304 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_84
+
+[info 2015/07/31 17:19:19.304 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_84 completed
+
+[info 2015/07/31 17:19:19.327 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_86
+
+[info 2015/07/31 17:19:19.328 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_86 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:19.329 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_86 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.329 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_86 completed
+
+[info 2015/07/31 17:19:19.358 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_89
+
+[info 2015/07/31 17:19:19.360 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_89 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:19.361 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_89 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.361 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_89 completed
+
+[info 2015/07/31 17:19:19.367 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_90
+
+[info 2015/07/31 17:19:19.369 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_90 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:19.369 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_90 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.369 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_90 completed
+
+[info 2015/07/31 17:19:19.373 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_91
+
+[info 2015/07/31 17:19:19.374 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_91 completed
+
+[info 2015/07/31 17:19:19.383 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_92
+
+[info 2015/07/31 17:19:19.384 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_92 completed
+
+[info 2015/07/31 17:19:19.421 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_96
+
+[info 2015/07/31 17:19:19.422 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_96 completed
+
+[info 2015/07/31 17:19:19.443 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_98
+
+[info 2015/07/31 17:19:19.445 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Alert_98 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:19.446 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Alert_98 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.446 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_98 completed
+
+[info 2015/07/31 17:19:19.466 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_101
+
+[info 2015/07/31 17:19:19.467 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_101 completed
+
+[info 2015/07/31 17:19:19.486 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_103
+
+[info 2015/07/31 17:19:19.488 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_103 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:19.489 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_103 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.489 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_103 completed
+
+[info 2015/07/31 17:19:19.503 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_105
+
+[info 2015/07/31 17:19:19.505 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_105 completed
+
+[info 2015/07/31 17:19:19.529 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_107
+
+[info 2015/07/31 17:19:19.531 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region _B__Alert_107 requesting initial image from 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 17:19:19.531 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] _B__Alert_107 is done getting image from 192.168.98.158(serverA:5300)<v2>:14020. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.532 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_107 completed
+
+[info 2015/07/31 17:19:19.535 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initializing region _B__Alert_108
+
+[info 2015/07/31 17:19:19.536 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Initialization of region _B__Alert_108 completed
+
+[info 2015/07/31 17:19:19.570 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initializing region _B__Alert_112
+
+[info 2015/07/31 17:19:19.572 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Region _B__Alert_112 requesting initial image from 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 17:19:19.572 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] _B__Alert_112 is done getting image from 192.168.98.158(serverD:5337)<v5>:42746. isDeltaGII is false
+
+[info 2015/07/31 17:19:19.572 EDT serverC <Pooled Waiting Message Processor 1> tid=0x67] Initialization of region _B__Alert_112 completed
+
+[info 2015/07/31 17:20:43.006 EDT serverC <ServerConnection on port 56725 Thread 1> tid=0xa7] Auto serializer generating type for class org.apache.geode.demo.fastfootshoes.model.Product for fields: 
+      stockOnHand: private int org.apache.geode.demo.fastfootshoes.model.Product.stockOnHand
+      wholeSalePrice: private double org.apache.geode.demo.fastfootshoes.model.Product.wholeSalePrice
+      size: private double org.apache.geode.demo.fastfootshoes.model.Product.size
+      brand: private java.lang.String org.apache.geode.demo.fastfootshoes.model.Product.brand
+      name: private java.lang.String org.apache.geode.demo.fastfootshoes.model.Product.name
+      type: private java.lang.String org.apache.geode.demo.fastfootshoes.model.Product.type
+      color: private java.lang.String org.apache.geode.demo.fastfootshoes.model.Product.color
+      gender: private java.lang.String org.apache.geode.demo.fastfootshoes.model.Product.gender
+      id: private java.lang.String org.apache.geode.demo.fastfootshoes.model.Product.id
+  
+
+[info 2015/07/31 19:02:28.050 EDT serverC <UDP ucast receiver> tid=0x21] Received Suspect notification for member(s) [192.168.98.158(serverD:5337)<v5>:42746] from 192.168.98.158(locatorB:5288:locator)<v1>:48204.  Reason=FD_SOCK tcp/ip health check
+
+[info 2015/07/31 19:02:28.052 EDT serverC <UDP ucast receiver> tid=0x21] failure detection received notification that 192.168.98.158(serverD:5337)<v5>:42746 is no longer suspect
+
+[warning 2015/07/31 19:02:29.001 EDT serverC <ClientHealthMonitor Thread> tid=0x56] Monitoring client with member id identity(192.168.98.158(5355:loner):56910:c707fde5,connection=1. It had been 5,831,457 ms since the latest heartbeat. Max interval is 60,000. Terminated client.
+
+[info 2015/07/31 19:02:29.001 EDT serverC <BridgeMembership Event Invoker> tid=0x77] Connection: shared=false ordered=true failed to connect to peer 192.168.98.158(locatorA:5276:locator)<v0>:24336 because: java.net.SocketException: Network is unreachable
+
+[warning 2015/07/31 19:02:31.002 EDT serverC <BridgeMembership Event Invoker> tid=0x77] Connection: Attempting reconnect to peer  192.168.98.158(locatorA:5276:locator)<v0>:24336
+
+[warning 2015/07/31 19:03:28.047 EDT serverC <Management Task> tid=0x47] Attempting TCP/IP reconnect to  192.168.98.158(locatorA:5276:locator)<v0>:24336
+
+[info 2015/07/31 19:03:58.049 EDT serverC <Management Task> tid=0x47] Connection: shared=false ordered=true failed to connect to peer 192.168.98.158(locatorA:5276:locator)<v0>:24336 because: java.io.IOException: 30000 millis timeout while waiting for channel to be ready for connect. ch : java.nio.channels.SocketChannel[connection-pending remote=/192.168.98.158:59763]
+
+[warning 2015/07/31 19:04:00.050 EDT serverC <Management Task> tid=0x47] Connection: Attempting reconnect to peer  192.168.98.158(locatorA:5276:locator)<v0>:24336
+
+[info 2015/07/31 19:04:01.647 EDT serverC <BridgeServer-LoadPollingThread> tid=0x55] Connection: shared=false ordered=true failed to connect to peer 192.168.98.158(locatorA:5276:locator)<v0>:24336 because: java.io.IOException: 30000 millis timeout while waiting for channel to be ready for connect. ch : java.nio.channels.SocketChannel[connection-pending remote=/192.168.98.158:59763]
+
+[warning 2015/07/31 19:04:03.648 EDT serverC <BridgeServer-LoadPollingThread> tid=0x55] Connection: Attempting reconnect to peer  192.168.98.158(locatorA:5276:locator)<v0>:24336
+
+[info 2015/07/31 19:04:08.061 EDT serverC <TimeScheduler.Thread> tid=0x1e] broadcasting SUSPECT message (suspected_mbrs=[192.168.98.158(locatorA:5276:locator)<v0>:24336, 192.168.98.158(locatorB:5288:locator)<v1>:48204, 192.168.98.158(serverA:5300)<v2>:14020, 192.168.98.158(serverB:5312)<v3>:14037, 192.168.98.158(serverD:5337)<v5>:42746]) to group
+
+[info 2015/07/31 19:04:13.060 EDT serverC <TimeScheduler.Thread> tid=0x1e] broadcasting SUSPECT message (suspected_mbrs=[192.168.98.158(locatorA:5276:locator)<v0>:24336, 192.168.98.158(locatorB:5288:locator)<v1>:48204, 192.168.98.158(serverA:5300)<v2>:14020, 192.168.98.158(serverB:5312)<v3>:14037, 192.168.98.158(serverD:5337)<v5>:42746]) to group
+
+[info 2015/07/31 19:04:13.065 EDT serverC <VERIFY_SUSPECT.TimerThread> tid=0xd5] 192.168.98.158(serverC:5324)<v4>:52971: No suspect verification response received from 192.168.98.158(locatorB:5288:locator)<v1>:48204 in 5001 milliseconds: I believe it is gone.
+
+[info 2015/07/31 19:04:13.066 EDT serverC <VERIFY_SUSPECT.TimerThread> tid=0xd5] 192.168.98.158(serverC:5324)<v4>:52971: No suspect verification response received from 192.168.98.158(serverB:5312)<v3>:14037 in 5002 milliseconds: I believe it is gone.
+
+[info 2015/07/31 19:04:13.066 EDT serverC <VERIFY_SUSPECT.TimerThread> tid=0xd5] 192.168.98.158(serverC:5324)<v4>:52971: No suspect verification response received from 192.168.98.158(serverD:5337)<v5>:42746 in 5001 milliseconds: I believe it is gone.
+
+[info 2015/07/31 19:04:13.066 EDT serverC <VERIFY_SUSPECT.TimerThread> tid=0xd5] 192.168.98.158(serverC:5324)<v4>:52971: No suspect verification response received from 192.168.98.158(serverA:5300)<v2>:14020 in 5002 milliseconds: I believe it is gone.
+
+[info 2015/07/31 19:04:13.066 EDT serverC <VERIFY_SUSPECT.TimerThread> tid=0xd5] 192.168.98.158(serverC:5324)<v4>:52971: No suspect verification response received from 192.168.98.158(locatorA:5276:locator)<v0>:24336 in 5002 milliseconds: I believe it is gone.
+
+[info 2015/07/31 19:04:13.216 EDT serverC <ViewHandler> tid=0xd6] This member, 192.168.98.158(serverC:5324)<v4>:52971, is becoming group coordinator.
+
+[info 2015/07/31 19:04:13.220 EDT serverC <ViewHandler> tid=0xd6] Membership: sending new view [[192.168.98.158(serverC:5324)<v4>:52971|16] [192.168.98.158(serverC:5324)<v4>:52971/28509, 192.168.98.158(serverD:5337)<v5>:42746/50237] crashed mbrs: [192.168.98.158(serverB:5312)<v3>:14037/29745, 192.168.98.158(serverA:5300)<v2>:14020/53563, 192.168.98.158(locatorA:5276:locator)<v0>:24336/59763, 192.168.98.158(locatorB:5288:locator)<v1>:48204/41278]] (2 mbrs)
+  
+
+[warning 2015/07/31 19:04:13.221 EDT serverC <ViewHandler> tid=0xd6] failed to collect all ACKs (1) for view preparation [192.168.98.158(serverC:5324)<v4>:52971|16] [192.168.98.158(serverC:5324)<v4>:52971/28509, 192.168.98.158(serverD:5337)<v5>:42746/50237] crashed mbrs: [192.168.98.158(serverB:5312)<v3>:14037/29745, 192.168.98.158(serverA:5300)<v2>:14020/53563, 192.168.98.158(locatorA:5276:locator)<v0>:24336/59763, 192.168.98.158(locatorB:5288:locator)<v1>:48204/41278] after 12,437ms, missing ACKs from [192.168.98.158(serverD:5337)<v5>:42746]
+
+[info 2015/07/31 19:04:13.221 EDT serverC <ViewHandler> tid=0xd6] attempting to contact members that did not respond to view preparation: [192.168.98.158(serverD:5337)<v5>:42746]
+
+[info 2015/07/31 19:04:13.222 EDT serverC <ViewHandler> tid=0xd6] Checking failed to ack members: [192.168.98.158(serverD:5337)<v5>:42746]
+
+[info 2015/07/31 19:04:13.223 EDT serverC <Failed to ACK member verify Thread-1> tid=0xd7] Suspecting member which did not ACK: 192.168.98.158(serverD:5337)<v5>:42746
+
+[info 2015/07/31 19:04:13.224 EDT serverC <ViewHandler> tid=0xd6] Membership: sending new view [[192.168.98.158(serverC:5324)<v4>:52971|17] [192.168.98.158(serverC:5324)<v4>:52971/28509] crashed mbrs: [192.168.98.158(serverA:5300)<v2>:14020/53563, 192.168.98.158(serverB:5312)<v3>:14037/29745, 192.168.98.158(locatorA:5276:locator)<v0>:24336/59763, 192.168.98.158(locatorB:5288:locator)<v1>:48204/41278, 192.168.98.158(serverD:5337)<v5>:42746/50237]] (1 mbrs)
+  
+
+[info 2015/07/31 19:04:13.225 EDT serverC <ViewHandler> tid=0xd6] 
+     member 192.168.98.158(locatorA:5276:locator)<v0>:24336 has a weight of 3
+     member 192.168.98.158(locatorB:5288:locator)<v1>:48204 has a weight of 3
+     member 192.168.98.158(serverA:5300)<v2>:14020 has a weight of 15
+     member 192.168.98.158(serverB:5312)<v3>:14037 has a weight of 10
+     member 192.168.98.158(serverC:5324)<v4>:52971 has a weight of 10
+     member 192.168.98.158(serverD:5337)<v5>:42746 has a weight of 10
+
+[info 2015/07/31 19:04:13.225 EDT serverC <ViewHandler> tid=0xd6] quorum weight calculation:  oldWeight=51 failureWeight=41 threshold=51% (failure weight must be < 26)
+
+[info 2015/07/31 19:04:13.227 EDT serverC <UDP Loopback Message Handler> tid=0x20] Membership: received new view  [192.168.98.158(serverC:5324)<v4>:52971|17] [192.168.98.158(serverC:5324)<v4>:52971/28509] crashed mbrs: [192.168.98.158(serverB:5312)<v3>:14037/29745, 192.168.98.158(serverA:5300)<v2>:14020/53563, 192.168.98.158(serverD:5337)<v5>:42746/50237, 192.168.98.158(locatorA:5276:locator)<v0>:24336/59763, 192.168.98.158(locatorB:5288:locator)<v1>:48204/41278]
+
+[info 2015/07/31 19:04:13.228 EDT serverC <UDP Loopback Message Handler> tid=0x20] old membership weight=51, loss threshold=26 and failed weight=41
+
+[info 2015/07/31 19:04:13.228 EDT serverC <UDP Loopback Message Handler> tid=0x20] Membership: lead member is now 192.168.98.158(serverC:5324)<v4>:52971
+
+[severe 2015/07/31 19:04:13.228 EDT serverC <Quorum Lost Notification> tid=0xd8] Possible loss of quorum due to the loss of 5 cache processes: [192.168.98.158(serverB:5312)<v3>:14037, 192.168.98.158(serverA:5300)<v2>:14020, 192.168.98.158(serverD:5337)<v5>:42746, 192.168.98.158(locatorA:5276:locator)<v0>:24336, 192.168.98.158(locatorB:5288:locator)<v1>:48204]
+
+[info 2015/07/31 19:04:13.231 EDT serverC <View Message Processor> tid=0x5d] 192.168.98.158(serverC:5324)<v4>:52971 is the elder and the only member.
+
+[info 2015/07/31 19:04:13.231 EDT serverC <View Message Processor> tid=0x5d] Member at 192.168.98.158(locatorA:5276:locator)<v0>:24336 unexpectedly left the distributed cache: departed JGroups view
+
+[info 2015/07/31 19:04:13.232 EDT serverC <View Message Processor> tid=0x5d] Member at 192.168.98.158(locatorB:5288:locator)<v1>:48204 unexpectedly left the distributed cache: departed JGroups view
+
+[info 2015/07/31 19:04:13.233 EDT serverC <View Message Processor> tid=0x5d] Member at 192.168.98.158(serverA:5300)<v2>:14020 unexpectedly left the distributed cache: departed JGroups view
+
+[info 2015/07/31 19:04:13.233 EDT serverC <View Message Processor> tid=0x5d] Member at 192.168.98.158(serverB:5312)<v3>:14037 unexpectedly left the distributed cache: departed JGroups view
+
+[info 2015/07/31 19:04:13.238 EDT serverC <View Message Processor> tid=0x5d] Member at 192.168.98.158(serverD:5337)<v5>:42746 unexpectedly left the distributed cache: departed JGroups view
+
+[warning 2015/07/31 19:04:13.243 EDT serverC <DM-MemberEventInvoker> tid=0x1a] Redundancy has dropped below 1 configured copies to 0 actual copies for /Transaction
+
+[info 2015/07/31 19:04:13.243 EDT serverC <Pooled Waiting Message Processor 2> tid=0xde] Region Customer is requesting synchronization with 192.168.98.158(serverB:5312)<v3>:14037 for 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 19:04:13.243 EDT serverC <Pooled Waiting Message Processor 2> tid=0xde] Region Customer is requesting synchronization with 192.168.98.158(serverD:5337)<v5>:42746 for 192.168.98.158(serverA:5300)<v2>:14020
+
+[warning 2015/07/31 19:04:13.244 EDT serverC <DM-MemberEventInvoker> tid=0x1a] Redundancy has dropped below 1 configured copies to 0 actual copies for /Alert
+
+[info 2015/07/31 19:04:13.244 EDT serverC <Pooled Waiting Message Processor 7> tid=0xe6] Region MarkUp is requesting synchronization with 192.168.98.158(serverB:5312)<v3>:14037 for 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 19:04:13.244 EDT serverC <Pooled Waiting Message Processor 7> tid=0xe6] Region MarkUp is requesting synchronization with 192.168.98.158(serverD:5337)<v5>:42746 for 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 19:04:13.248 EDT serverC <Pooled Waiting Message Processor 6> tid=0xe4] Region Product is requesting synchronization with 192.168.98.158(serverB:5312)<v3>:14037 for 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 19:04:13.249 EDT serverC <Pooled Waiting Message Processor 6> tid=0xe4] Region Product is requesting synchronization with 192.168.98.158(serverD:5337)<v5>:42746 for 192.168.98.158(serverA:5300)<v2>:14020
+
+[info 2015/07/31 19:04:13.253 EDT serverC <Pooled Waiting Message Processor 14> tid=0xed] Region Customer is requesting synchronization with 192.168.98.158(serverD:5337)<v5>:42746 for 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 19:04:13.254 EDT serverC <Pooled Waiting Message Processor 0> tid=0x2b] Region MarkUp is requesting synchronization with 192.168.98.158(serverD:5337)<v5>:42746 for 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 19:04:13.255 EDT serverC <Pooled Waiting Message Processor 6> tid=0xe4] Region Product is requesting synchronization with 192.168.98.158(serverD:5337)<v5>:42746 for 192.168.98.158(serverB:5312)<v3>:14037
+
+[info 2015/07/31 19:04:30.052 EDT serverC <Management Task> tid=0x47] Ending reconnect attempt because 192.168.98.158(locatorA:5276:locator)<v0>:24336 has disappeared.
+
+[info 2015/07/31 19:15:38.408 EDT serverC <Thread-1> tid=0xd] Closing org.springframework.context.support.ClassPathXmlApplicationContext@58f663e4: startup date [Fri Jul 31 17:18:56 EDT 2015]; root of context hierarchy
+
+[info 2015/07/31 19:15:38.409 EDT serverC <Distributed system shutdown hook> tid=0xc] VM is exiting - shutting down distributed system
+
+[info 2015/07/31 19:15:38.410 EDT serverC <Thread-1> tid=0xd] Stopping beans in phase 2147483647
+
+[info 2015/07/31 19:15:38.411 EDT serverC <Thread-1> tid=0xd] Bridge server on port 56,725 is shutting down.
+
+[warning 2015/07/31 19:15:38.415 EDT serverC <Thread-1> tid=0xd] 
+java.lang.NullPointerException
+	at com.gemstone.gemfire.management.internal.beans.ManagementAdapter.handleCacheServerStop(ManagementAdapter.java:728)
+	at com.gemstone.gemfire.management.internal.beans.ManagementListener.handleEvent(ManagementListener.java:196)
+	at com.gemstone.gemfire.distributed.internal.InternalDistributedSystem.notifyResourceEventListeners(InternalDistributedSystem.java:2085)
+	at com.gemstone.gemfire.distributed.internal.InternalDistributedSystem.handleResourceEvent(InternalDistributedSystem.java:488)
+	at com.gemstone.gemfire.internal.cache.BridgeServerImpl.stop(BridgeServerImpl.java:475)
+	at org.springframework.data.gemfire.server.CacheServerFactoryBean.stop(CacheServerFactoryBean.java:155)
+	at org.springframework.data.gemfire.server.CacheServerFactoryBean.stop(CacheServerFactoryBean.java:132)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStop(DefaultLifecycleProcessor.java:223)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$300(DefaultLifecycleProcessor.java:51)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.stop(DefaultLifecycleProcessor.java:356)
+	at org.springframework.context.support.DefaultLifecycleProcessor.stopBeans(DefaultLifecycleProcessor.java:196)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onClose(DefaultLifecycleProcessor.java:113)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1059)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:982)
+
+[info 2015/07/31 19:15:38.415 EDT serverC <Thread-1> tid=0xd] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@38eb247d: defining beans [pdxSerializer,gemfireCache,gemfireServer,transactionListener,dataSource,alertsDAO,alertCacheWriter,Alert,Customer,Transaction,MarkUp,Product,customerTransactionIndex,org.springframework.data.gemfire.function.config.GemfireFunctionBeanPostProcessor#0,orderCounter,productGroupCounter,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.data.gemfire.function.execution.GemfireOnRegionFunctionTemplate#0,orderCounterCaller,org.springframework.data.gemfire.function.execution.GemfireOnRegionFunctionTemplate#1,productGroupCounterCaller,org.springframework.data.gemfire.function.config.GemfireFunctionBeanPostProcessor#1,org.springframework.data.gemfire.repository.config.GemfireRepositoryConfigurationExtension#0,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,transactionRepository,alertRepository,productRepository,markUpRepository,customerRepository,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+
+[info 2015/07/31 19:15:38.421 EDT serverC <Distributed system shutdown hook> tid=0xc] GemFireCache[id = 2052448294; isClosing = true; isShutDownAll = false; created = Fri Jul 31 17:18:57 EDT 2015; server = true; copyOnRead = false; lockLease = 120; lockTimeout = 60]: Now closing.
+
+[info 2015/07/31 19:15:38.421 EDT serverC <Distributed system shutdown hook> tid=0xc] Resetting original MemoryPoolMXBean heap threshold bytes 0 on pool PS Old Gen
+
+[info 2015/07/31 19:15:38.442 EDT serverC <Distributed system shutdown hook> tid=0xc] Rest Server on port 8,083 is shutting down
+
+[info 2015/07/31 19:15:38.443 EDT serverC <Distributed system shutdown hook> tid=0xc] Shutting down DistributionManager 192.168.98.158(serverC:5324)<v4>:52971. 
+
+[info 2015/07/31 19:15:38.546 EDT serverC <Distributed system shutdown hook> tid=0xc] Now closing distribution for 192.168.98.158(serverC:5324)<v4>:52971
+
+[info 2015/07/31 19:15:38.547 EDT serverC <Distributed system shutdown hook> tid=0xc] Membership: sending new view [[192.168.98.158(serverC:5324)<v4>:52971|28] []] (0 mbrs)
+  
+
+[info 2015/07/31 19:15:38.550 EDT serverC <Distributed system shutdown hook> tid=0xc] DistributionManager stopped in 107ms.
+
+[info 2015/07/31 19:15:38.551 EDT serverC <Distributed system shutdown hook> tid=0xc] Marking DistributionManager 192.168.98.158(serverC:5324)<v4>:52971 as closed.

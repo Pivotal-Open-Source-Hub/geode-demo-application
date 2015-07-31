@@ -1,0 +1,471 @@
+
+[info 2015/07/31 14:16:43.478 EDT serverC <main> tid=0x1] Renamed old log file to "serverC-01-01.log".
+
+[info 2015/07/31 14:16:43.482 EDT serverC <main> tid=0x1] Startup Configuration:
+   ### GemFire Properties defined with system property ###
+  http-service-port=8083
+  locators=127.0.0.1[10334],127.0.0.1[10335]
+  name=serverC
+  start-dev-rest-api=true
+  use-cluster-configuration=false
+  ### GemFire Properties defined with file:/Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/conf/gemfire.properties ###
+  conserve-sockets=false
+  log-level=config
+  mcast-port=0
+  statistic-archive-file=stats.gfs
+  statistic-sample-rate=1000
+  statistic-sampling-enabled=true
+  ### GemFire Properties defined with launcher ###
+  log-file=serverC.log
+  ### GemFire Properties using default values ###
+  ack-severe-alert-threshold=0
+  ack-wait-threshold=15
+  archive-disk-space-limit=0
+  archive-file-size-limit=0
+  async-distribution-timeout=0
+  async-max-queue-size=8
+  async-queue-timeout=60000
+  bind-address=
+  cache-xml-file=cache.xml
+  cluster-configuration-dir=/Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/serverC
+  cluster-ssl-ciphers=any
+  cluster-ssl-enabled=false
+  cluster-ssl-keystore=
+  cluster-ssl-keystore-password=
+  cluster-ssl-keystore-type=
+  cluster-ssl-protocols=any
+  cluster-ssl-require-authentication=true
+  cluster-ssl-truststore=
+  cluster-ssl-truststore-password=
+  conflate-events=server
+  delta-propagation=true
+  deploy-working-dir=.
+  disable-auto-reconnect=false
+  disable-tcp=false
+  distributed-system-id=-1
+  durable-client-id=
+  durable-client-timeout=300
+  enable-cluster-configuration=true
+  enable-network-partition-detection=false
+  enable-time-statistics=false
+  enforce-unique-host=false
+  gateway-ssl-ciphers=any
+  gateway-ssl-enabled=false
+  gateway-ssl-keystore=
+  gateway-ssl-keystore-password=
+  gateway-ssl-keystore-type=
+  gateway-ssl-protocols=any
+  gateway-ssl-require-authentication=true
+  gateway-ssl-truststore=
+  gateway-ssl-truststore-password=
+  groups=
+  http-service-bind-address=
+  http-service-ssl-ciphers=any
+  http-service-ssl-enabled=false
+  http-service-ssl-keystore=
+  http-service-ssl-keystore-password=
+  http-service-ssl-keystore-type=
+  http-service-ssl-protocols=any
+  http-service-ssl-require-authentication=false
+  http-service-ssl-truststore=
+  http-service-ssl-truststore-password=
+  jmx-manager=false
+  jmx-manager-access-file=
+  jmx-manager-bind-address=
+  jmx-manager-hostname-for-clients=
+  jmx-manager-http-port=8083
+  jmx-manager-password-file=
+  jmx-manager-port=1099
+  jmx-manager-ssl=false
+  jmx-manager-ssl-ciphers=any
+  jmx-manager-ssl-enabled=false
+  jmx-manager-ssl-keystore=
+  jmx-manager-ssl-keystore-password=
+  jmx-manager-ssl-keystore-type=
+  jmx-manager-ssl-protocols=any
+  jmx-manager-ssl-require-authentication=true
+  jmx-manager-ssl-truststore=
+  jmx-manager-ssl-truststore-password=
+  jmx-manager-start=false
+  jmx-manager-update-rate=2000
+  load-cluster-configuration-from-dir=false
+  locator-wait-time=0
+  log-disk-space-limit=0
+  log-file-size-limit=0
+  max-num-reconnect-tries=3
+  max-wait-time-reconnect=60000
+  mcast-address=239.192.81.1
+  mcast-flow-control=1048576, 0.25, 5000
+  mcast-recv-buffer-size=1048576
+  mcast-send-buffer-size=65535
+  mcast-ttl=32
+  member-timeout=5000
+  membership-port-range=1024-65535
+  memcached-bind-address=
+  memcached-port=0
+  memcached-protocol=ASCII
+  redundancy-zone=
+  remote-locators=
+  remove-unresponsive-client=false
+  roles=
+  security-=
+  security-client-accessor=
+  security-client-accessor-pp=
+  security-client-auth-init=
+  security-client-authenticator=
+  security-client-dhalgo=
+  security-log-file=
+  security-log-level=config
+  security-peer-auth-init=
+  security-peer-authenticator=
+  security-peer-verifymember-timeout=1000
+  server-bind-address=
+  server-ssl-ciphers=any
+  server-ssl-enabled=false
+  server-ssl-keystore=
+  server-ssl-keystore-password=
+  server-ssl-keystore-type=
+  server-ssl-protocols=any
+  server-ssl-require-authentication=true
+  server-ssl-truststore=
+  server-ssl-truststore-password=
+  socket-buffer-size=32768
+  socket-lease-time=60000
+  ssl-ciphers=any
+  ssl-enabled=false
+  ssl-protocols=any
+  ssl-require-authentication=true
+  start-locator=
+  tcp-port=0
+  udp-fragment-size=60000
+  udp-recv-buffer-size=1048576
+  udp-send-buffer-size=65535
+  user-command-packages=
+  
+
+[info 2015/07/31 14:16:43.501 EDT serverC <main> tid=0x1] 
+  ---------------------------------------------------------------------------
+  
+    Copyright (C) 1997-2015 Pivotal Software, Inc. All rights reserved. This
+    product is protected by U.S. and international copyright and intellectual
+    property laws. Pivotal products are covered by one or more patents listed
+    at http://www.pivotal.io/patents.  Pivotal is a registered trademark
+    of trademark of Pivotal Software, Inc. in the United States and/or other
+    jurisdictions.  All other marks and names mentioned herein may be
+    trademarks of their respective companies.
+  
+  ---------------------------------------------------------------------------
+  Java version:   1.0.0.0-SNAPSHOT abaker 040615 2015-04-06 12:38:07 -0700 javac 1.7.0_75
+  Native version: native code unavailable
+  Source revision: ce63268fc0999b4f9512f2a303f9baf4a541033c
+  Source repository: opengem_dev_Jan15
+  Running on: null, 8 cpu(s), x86_64 Mac OS X 10.9.5
+  Process ID: 89145
+  User: lshannon
+  Current dir: /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/serverC
+  Home dir: /Users/lshannon
+  Command Line Parameters:
+    -DgemfirePropertyFile=/Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/conf/gemfire.properties
+    -Dgemfire.locators=127.0.0.1[10334],127.0.0.1[10335]
+    -Dgemfire.use-cluster-configuration=false
+    -Dgemfire.http-service-port=8083
+    -Dgemfire.start-dev-rest-api=true
+    -Xms256m
+    -Xmx256m
+    -XX:OnOutOfMemoryError=kill -KILL %p
+    -Dgemfire.launcher.registerSignalHandlers=true
+    -Djava.awt.headless=true
+    -Dsun.rmi.dgc.server.gcInterval=9223372036854775806
+  Class Path:
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/gemfire-core-1.0.0.0-SNAPSHOT.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/aopalliance-1.0.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/derbyclient-10.11.1.1.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/FastFootShoesClusterSideLogic-0.0.1-SNAPSHOT.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/FastFootShoesData-0.0.1-SNAPSHOT.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/FastFootShoesModel-0.0.1-SNAPSHOT.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/ShoeDataLoader-0.0.1-RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/slf4j-api-1.7.7.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/spring-aop-4.0.5.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/spring-core-4.1.5.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/lib/spring-jdbc-4.1.0.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/gemfire-core-dependencies.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-aop-3.2.12.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-beans-3.2.12.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-context-3.2.12.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-context-support-3.2.12.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-data-commons-1.9.1.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-data-gemfire-1.5.1.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-expression-3.2.12.RELEASE.jar
+    /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/spring-tx-3.2.12.RELEASE.jar
+  Library Path:
+    /Users/lshannon/Library/Java/Extensions
+    /Library/Java/Extensions
+    /Network/Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+    .
+  System Properties:
+      awt.toolkit = sun.lwawt.macosx.LWCToolkit
+      file.encoding = UTF-8
+      file.encoding.pkg = sun.io
+      file.separator = /
+      ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+      gemfire.http-service-port = 8083
+      gemfire.launcher.registerSignalHandlers = true
+      gemfire.locators = 127.0.0.1[10334],127.0.0.1[10335]
+      gemfire.name = serverC
+      gemfire.start-dev-rest-api = true
+      gemfire.use-cluster-configuration = false
+      gemfirePropertyFile = /Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/conf/gemfire.properties
+      gopherProxySet = false
+      http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+      java.awt.graphicsenv = sun.awt.CGraphicsEnvironment
+      java.awt.headless = true
+      java.awt.printerjob = sun.lwawt.macosx.CPrinterJob
+      java.class.version = 51.0
+      java.endorsed.dirs = /Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/endorsed
+      java.ext.dirs = /Users/lshannon/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+      java.home = /Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre
+      java.io.tmpdir = /var/folders/n9/7c9by5xx2q3_2hdd10z7k5_00000gq/T/
+      java.rmi.server.randomIDs = true
+      java.runtime.name = Java(TM) SE Runtime Environment
+      java.runtime.version = 1.7.0_71-b14
+      java.specification.name = Java Platform API Specification
+      java.specification.vendor = Oracle Corporation
+      java.specification.version = 1.7
+      java.vendor = Oracle Corporation
+      java.vendor.url = http://java.oracle.com/
+      java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+      java.version = 1.7.0_71
+      java.vm.info = mixed mode
+      java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+      java.vm.specification.name = Java Virtual Machine Specification
+      java.vm.specification.vendor = Oracle Corporation
+      java.vm.specification.version = 1.7
+      java.vm.vendor = Oracle Corporation
+      java.vm.version = 24.71-b01
+      jna.platform.library.path = /usr/lib:/usr/lib
+      jnidispatch.path = /var/folders/n9/7c9by5xx2q3_2hdd10z7k5_00000gq/T/jna-1299062879/jna4663903550248337621.tmp
+      line.separator = 
+  
+      log4j.configurationFile = jar:file:/Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/gemfire-core-1.0.0.0-SNAPSHOT.jar!/com/gemstone/gemfire/internal/logging/log4j/log4j2-default.xml
+      os.version = 10.9.5
+      p2p.useSSL = false
+      path.separator = :
+      socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+      sun.arch.data.model = 64
+      sun.boot.class.path = /Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/classes
+      sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib
+      sun.cpu.endian = little
+      sun.cpu.isalist = 
+      sun.io.unicode.encoding = UnicodeBig
+      sun.java.command = com.gemstone.gemfire.distributed.ServerLauncher start serverC --redirect-output --server-port=0 --spring-xml-location=file:////Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/conf/fastfootshoes-spring-cache.xml
+      sun.java.launcher = SUN_STANDARD
+      sun.jnu.encoding = UTF-8
+      sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+      sun.nio.ch.bugLevel = 
+      sun.os.patch.level = unknown
+      sun.rmi.dgc.server.gcInterval = 9223372036854775806
+      user.country = US
+      user.country.format = CA
+      user.language = en
+      user.timezone = America/Toronto
+  ---------------------------------------------------------------------------
+  
+
+[info 2015/07/31 14:16:43.509 EDT serverC <main> tid=0x1] Startup Configuration:
+   ### GemFire Properties defined with system property ###
+  http-service-port=8083
+  locators=127.0.0.1[10334],127.0.0.1[10335]
+  name=serverC
+  start-dev-rest-api=true
+  use-cluster-configuration=false
+  ### GemFire Properties defined with file:/Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/conf/gemfire.properties ###
+  conserve-sockets=false
+  log-level=config
+  mcast-port=0
+  statistic-archive-file=stats.gfs
+  statistic-sample-rate=1000
+  statistic-sampling-enabled=true
+  ### GemFire Properties defined with launcher ###
+  log-file=serverC.log
+  ### GemFire Properties using default values ###
+  ack-severe-alert-threshold=0
+  ack-wait-threshold=15
+  archive-disk-space-limit=0
+  archive-file-size-limit=0
+  async-distribution-timeout=0
+  async-max-queue-size=8
+  async-queue-timeout=60000
+  bind-address=
+  cache-xml-file=cache.xml
+  cluster-configuration-dir=/Users/lshannon/Documents/geode-demo-application/demo/geode-server-package/serverC
+  cluster-ssl-ciphers=any
+  cluster-ssl-enabled=false
+  cluster-ssl-keystore=
+  cluster-ssl-keystore-password=
+  cluster-ssl-keystore-type=
+  cluster-ssl-protocols=any
+  cluster-ssl-require-authentication=true
+  cluster-ssl-truststore=
+  cluster-ssl-truststore-password=
+  conflate-events=server
+  delta-propagation=true
+  deploy-working-dir=.
+  disable-auto-reconnect=false
+  disable-tcp=false
+  distributed-system-id=-1
+  durable-client-id=
+  durable-client-timeout=300
+  enable-cluster-configuration=true
+  enable-network-partition-detection=false
+  enable-time-statistics=false
+  enforce-unique-host=false
+  gateway-ssl-ciphers=any
+  gateway-ssl-enabled=false
+  gateway-ssl-keystore=
+  gateway-ssl-keystore-password=
+  gateway-ssl-keystore-type=
+  gateway-ssl-protocols=any
+  gateway-ssl-require-authentication=true
+  gateway-ssl-truststore=
+  gateway-ssl-truststore-password=
+  groups=
+  http-service-bind-address=
+  http-service-ssl-ciphers=any
+  http-service-ssl-enabled=false
+  http-service-ssl-keystore=
+  http-service-ssl-keystore-password=
+  http-service-ssl-keystore-type=
+  http-service-ssl-protocols=any
+  http-service-ssl-require-authentication=false
+  http-service-ssl-truststore=
+  http-service-ssl-truststore-password=
+  jmx-manager=false
+  jmx-manager-access-file=
+  jmx-manager-bind-address=
+  jmx-manager-hostname-for-clients=
+  jmx-manager-http-port=8083
+  jmx-manager-password-file=
+  jmx-manager-port=1099
+  jmx-manager-ssl=false
+  jmx-manager-ssl-ciphers=any
+  jmx-manager-ssl-enabled=false
+  jmx-manager-ssl-keystore=
+  jmx-manager-ssl-keystore-password=
+  jmx-manager-ssl-keystore-type=
+  jmx-manager-ssl-protocols=any
+  jmx-manager-ssl-require-authentication=true
+  jmx-manager-ssl-truststore=
+  jmx-manager-ssl-truststore-password=
+  jmx-manager-start=false
+  jmx-manager-update-rate=2000
+  load-cluster-configuration-from-dir=false
+  locator-wait-time=0
+  log-disk-space-limit=0
+  log-file-size-limit=0
+  max-num-reconnect-tries=3
+  max-wait-time-reconnect=60000
+  mcast-address=239.192.81.1
+  mcast-flow-control=1048576, 0.25, 5000
+  mcast-recv-buffer-size=1048576
+  mcast-send-buffer-size=65535
+  mcast-ttl=32
+  member-timeout=5000
+  membership-port-range=1024-65535
+  memcached-bind-address=
+  memcached-port=0
+  memcached-protocol=ASCII
+  redundancy-zone=
+  remote-locators=
+  remove-unresponsive-client=false
+  roles=
+  security-=
+  security-client-accessor=
+  security-client-accessor-pp=
+  security-client-auth-init=
+  security-client-authenticator=
+  security-client-dhalgo=
+  security-log-file=
+  security-log-level=config
+  security-peer-auth-init=
+  security-peer-authenticator=
+  security-peer-verifymember-timeout=1000
+  server-bind-address=
+  server-ssl-ciphers=any
+  server-ssl-enabled=false
+  server-ssl-keystore=
+  server-ssl-keystore-password=
+  server-ssl-keystore-type=
+  server-ssl-protocols=any
+  server-ssl-require-authentication=true
+  server-ssl-truststore=
+  server-ssl-truststore-password=
+  socket-buffer-size=32768
+  socket-lease-time=60000
+  ssl-ciphers=any
+  ssl-enabled=false
+  ssl-protocols=any
+  ssl-require-authentication=true
+  start-locator=
+  tcp-port=0
+  udp-fragment-size=60000
+  udp-recv-buffer-size=1048576
+  udp-send-buffer-size=65535
+  user-command-packages=
+  
+
+[warning 2015/07/31 14:16:44.643 EDT serverC <main> tid=0x1] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gemfireServer': Cannot resolve reference to bean 'gemfireCache' while setting bean property 'cache'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gemfireCache': FactoryBean threw exception on object creation; nested exception is java.lang.RuntimeException: java.net.UnknownHostException
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:334)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:618)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.data.gemfire.support.SpringContextBootstrappingInitializer.refreshApplicationContext(SpringContextBootstrappingInitializer.java:238)
+	at org.springframework.data.gemfire.support.SpringContextBootstrappingInitializer.init(SpringContextBootstrappingInitializer.java:281)
+	at com.gemstone.gemfire.distributed.ServerLauncher.startWithSpring(ServerLauncher.java:760)
+	at com.gemstone.gemfire.distributed.ServerLauncher.start(ServerLauncher.java:692)
+	at com.gemstone.gemfire.distributed.ServerLauncher.run(ServerLauncher.java:622)
+	at com.gemstone.gemfire.distributed.ServerLauncher.main(ServerLauncher.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gemfireCache': FactoryBean threw exception on object creation; nested exception is java.lang.RuntimeException: java.net.UnknownHostException
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:173)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:102)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1467)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:246)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:191)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:328)
+	... 18 more
+Caused by: java.lang.RuntimeException: java.net.UnknownHostException
+	at com.gemstone.gemfire.distributed.internal.direct.DirectChannel.initAddress(DirectChannel.java:901)
+	at com.gemstone.gemfire.distributed.internal.direct.DirectChannel.<init>(DirectChannel.java:128)
+	at com.gemstone.gemfire.distributed.internal.membership.jgroup.JGroupMembershipManager.initialize(JGroupMembershipManager.java:1649)
+	at com.gemstone.gemfire.distributed.internal.membership.jgroup.JGroupMemberFactory.newMembershipManager(JGroupMemberFactory.java:112)
+	at com.gemstone.gemfire.distributed.internal.membership.MemberFactory.newMembershipManager(MemberFactory.java:89)
+	at com.gemstone.gemfire.distributed.internal.DistributionManager.<init>(DistributionManager.java:1214)
+	at com.gemstone.gemfire.distributed.internal.DistributionManager.<init>(DistributionManager.java:1266)
+	at com.gemstone.gemfire.distributed.internal.DistributionManager.create(DistributionManager.java:610)
+	at com.gemstone.gemfire.distributed.internal.InternalDistributedSystem.initialize(InternalDistributedSystem.java:597)
+	at com.gemstone.gemfire.distributed.internal.InternalDistributedSystem.newInstance(InternalDistributedSystem.java:264)
+	at com.gemstone.gemfire.distributed.DistributedSystem.connect(DistributedSystem.java:1571)
+	at com.gemstone.gemfire.cache.CacheFactory.create(CacheFactory.java:227)
+	at org.springframework.data.gemfire.CacheFactoryBean.createCache(CacheFactoryBean.java:404)
+	at org.springframework.data.gemfire.CacheFactoryBean.init(CacheFactoryBean.java:271)
+	at org.springframework.data.gemfire.CacheFactoryBean.getObject(CacheFactoryBean.java:455)
+	at org.springframework.data.gemfire.CacheFactoryBean.getObject(CacheFactoryBean.java:77)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:166)
+	... 23 more
+Caused by: java.net.UnknownHostException
+	at com.gemstone.gemfire.internal.SocketCreator.getLocalHost(SocketCreator.java:337)
+	at com.gemstone.gemfire.distributed.internal.direct.DirectChannel.initAddress(DirectChannel.java:897)
+	... 39 more
+
+[info 2015/07/31 14:16:44.644 EDT serverC <main> tid=0x1] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3e3badef: defining beans [pdxSerializer,gemfireCache,gemfireServer,transactionListener,dataSource,alertsDAO,alertCacheWriter,Alert,Customer,Transaction,MarkUp,Product,customerTransactionIndex,org.springframework.data.gemfire.function.config.GemfireFunctionBeanPostProcessor#0,orderCounter,productGroupCounter,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.data.gemfire.function.execution.GemfireOnRegionFunctionTemplate#0,orderCounterCaller,org.springframework.data.gemfire.function.execution.GemfireOnRegionFunctionTemplate#1,productGroupCounterCaller,org.springframework.data.gemfire.function.config.GemfireFunctionBeanPostProcessor#1,org.springframework.data.gemfire.repository.config.GemfireRepositoryConfigurationExtension#0,org.springframework.data.repository.core.support.RepositoryInterfaceAwareBeanPostProcessor#0,alertRepository,transactionRepository,productRepository,customerRepository,markUpRepository,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy

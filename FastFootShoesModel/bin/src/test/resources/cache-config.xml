@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:gfe="http://www.springframework.org/schema/gemfire"
+	xmlns:gfe-data="http://www.springframework.org/schema/data/gemfire"
+	xmlns:repo="http://www.springframework.org/schema/data/repository"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/data/gemfire 
+	http://www.springframework.org/schema/data/gemfire/spring-data-gemfire.xsd
+	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util/spring-util.xsd
+	http://www.springframework.org/schema/gemfire 
+	http://www.springframework.org/schema/gemfire/spring-gemfire.xsd
+	http://www.springframework.org/schema/data/repository
+    http://www.springframework.org/schema/data/repository/spring-repository.xsd">
+    
+    <util:properties id="peerCacheConfigurationSettings">
+		<prop key="name">springGemFirePeerCache</prop>
+		<prop key="locators">127.0.0.1[11235]</prop>
+		<prop key="log-level">config</prop>
+		<prop key="mcast-port">0</prop>
+		<prop key="start-locator">127.0.0.1[11235]</prop>
+	</util:properties>
+	
+	<bean id="pdxSerializer" class="com.gemstone.gemfire.pdx.ReflectionBasedAutoSerializer">
+		<constructor-arg value="org.apache.geode.demo.fastfootshoes.model.*"/>
+	</bean>
+
+	<gfe:cache  id="gemfireCacheTest" pdx-serializer-ref="pdxSerializer" properties-ref="peerCacheConfigurationSettings"/>
+	
+	<gfe:cache-server auto-startup="true" cache-ref="gemfireCacheTest" />
+			
+	<gfe:replicated-region cache-ref="gemfireCacheTest" id="Alert" close="true" scope="distributed-ack"/>	
+	<gfe:replicated-region cache-ref="gemfireCacheTest" id="Customer" close="true" scope="distributed-ack"/>
+	<gfe:partitioned-region cache-ref="gemfireCacheTest" id="Transaction" close="true"/>
+	<gfe:replicated-region cache-ref="gemfireCacheTest" id="MarkUp" close="true" scope="distributed-ack"/>
+	<gfe:replicated-region cache-ref="gemfireCacheTest" id="Product" close="true" scope="distributed-ack"/>
+	
+	<gfe-data:repositories base-package="org.apache.geode.demo.fastfootshoes.repositories" />
+		
+</beans>

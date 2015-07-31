@@ -26,15 +26,15 @@
 	<gfe:client-cache pool-name="gemfirePool" pdx-serializer-ref="pdxSerializer"/>
 
 	<gfe:client-region id="Customer" pool-name="gemfirePool" />
-	<gfe:client-region id="Product" pool-name="gemfirePool" />
+	<gfe:client-region id="Product" pool-name="gemfirePool" shortcut="CACHING_PROXY"/>
 	<gfe:client-region id="Transaction" pool-name="gemfirePool" />
 	<gfe:client-region id="MarkUp" pool-name="gemfirePool" />
 	<gfe:client-region id="Alert" pool-name="gemfirePool" />
 	<gfe:client-region id="TransactionSummary" pool-name="gemfirePool" />
 	
 	<gfe:pool id="gemfirePool">
-		<gfe:locator host="ec2-54-175-236-76.compute-1.amazonaws.com" port="10334" />
-		<gfe:locator host="ec2-54-175-236-76.compute-1.amazonaws.com" port="10335" />
+		<gfe:locator host=localhost port="10334" />
+		<gfe:locator host="localhost" port="10335" />
 	</gfe:pool>
 	
 	<context:component-scan base-package="org.apache.geode.demo.fastfootshoes.clusterside.functions"/>
