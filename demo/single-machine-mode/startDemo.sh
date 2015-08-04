@@ -9,8 +9,8 @@ then
 	../geode-server-package/startCluster.sh
 	echo "Loading Historic Data"
 	java -jar ./client-apps/FastFootShoesHistoricDataLoader-0.0.1-SNAPSHOT.jar
-	echo "Starting Demo Application"
-	java -jar ./client-apps/FastFootShoesRetail-0.0.1-RELEASE.jar
+#	echo "Starting Demo Application"
+#	java -jar ./client-apps/FastFootShoesRetail-0.0.1-RELEASE.jar
 	echo $CLOSE_MESSAGE
 	read close_me
 else
