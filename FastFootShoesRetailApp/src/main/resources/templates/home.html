@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <script type="text/javascript" th:src="@{js/gf-repo-counts.js}"></script>
 <script type="text/javascript" th:src="@{js/gf-highchart.js}"></script>
+<script type="text/javascript" th:src="@{js/gf-lowstock-interest.js}"></script>
 
 <style>
 .alert {
@@ -19,7 +20,29 @@
 	height: 200px;
 	overflow-y: auto;
 }
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+.container {
+	padding-left: 0;
+	padding-right: 0;
+}
 </style>
+
+<!-- UI for the Registered Interest Widget -->
+<script id="entry-template" type="text/x-handlebars-template">
+  		<div id="eventList" class="alertList">
+				<table class="table table-condensed">
+				{{#each eventList}}
+					<tr>
+						<td><a href="/collectOrder?id={{this.value.id}}">{{this.value.brand}} : {{this.value.type}} = {{this.value.stockOnHand}} remaining</a></td>
+					</tr>
+ 				{{/each}}
+				</table>
+		</div>
+</script>
 
 </head>
 <body>
@@ -53,10 +76,25 @@
 					<div id="stockByType" style="height:150px" align="center" class="alert"><i class='fa fa-spinner fa-spin'></i></div>
 				</div>
 			</div>
+		<!-- Close the Widget Row -->
 		</div>
-
-		<div class="span12">
-				<div id="chart" style="width: 100%; height: 500px;"></div>
+		<!-- Open the Stock alert and chart panel -->
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-danger">
+					<div class="panel-heading" align="center">
+						<h3 class="panel-title">The Following Products Are Low On Stock</h3>
+					</div>
+					<div id="eventList" align="center" class="alertList">
+						<h4>No Product Stock Warnings</h4>
+						<br />
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div id="chart" style="width: 100%; height: 240px;"></div>
+			</div>
+		<!-- Close the Stock alert and chart panel -->
 		</div>
 	</section>
 </body>

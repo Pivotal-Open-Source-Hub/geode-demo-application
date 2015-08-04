@@ -8,7 +8,10 @@ import java.util.Date;
 
 import org.apache.geode.demo.fastfootshoes.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
+import org.springframework.stereotype.Component;
+
 import com.gemstone.gemfire.cache.EntryEvent;
 import com.gemstone.gemfire.cache.util.CacheListenerAdapter;
 
@@ -16,13 +19,16 @@ import com.gemstone.gemfire.cache.util.CacheListenerAdapter;
  * @author lshannon
  *
  */
+@Component
 public class ProductListener extends CacheListenerAdapter<String, Product> {
 
 	@Autowired
 	SimpMessageSendingOperations sender;
+	
+	@Value("${product.interest.threshold}")
+	private int display_threshold;
 
-	private static final SimpleDateFormat dateFormat = new SimpleDateFormat(
-			"HH:mm:ss");
+	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
 	@Override
 	public void afterCreate(EntryEvent<String, Product> entryEvent) {
@@ -35,8 +41,11 @@ public class ProductListener extends CacheListenerAdapter<String, Product> {
 	}
 
 	private void updateSocket(EntryEvent<String, Product> entryEvent) {
-		System.out.println("Adding " + entryEvent.getNewValue().toString() + " to the web socket");
-		sender.convertAndSend("/topic/alarms", new StockAlert(entryEvent));
+		if (entryEvent.getNewValue().getStockOnHand() <= display_threshold) {
+			System.out.println("Adding " + entryEvent.getNewValue().toString() + " to the web socket");
+			sender.convertAndSend("/topic/alarms", new StockAlert(entryEvent));
+		}
+		
 	}
 
 	static class StockAlert {

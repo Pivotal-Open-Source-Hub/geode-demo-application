@@ -298,3 +298,8 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
