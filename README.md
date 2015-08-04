@@ -1,18 +1,17 @@
 # geode-demo-application
 This is an example of:
 * Starting and managing a Spring Configured Geode Cluster
-* An application containing a Geode client
+* Application(s) containing a Geode client that use Geode as a data store or leverage its compute capabilities
 
-There are three ways to run this demo:
+There are two ways to run this demo:
 
 1. Single Node Stand Alone Mode
 2. Geode Cluster Running On AWS
-3. Geode Cluster Running On Docker
 
 ## Single Node Stand Alone Mode
 
 ### Introduction
-With this option the project can be downloaded and the Geode cluster as well as the demo application can be started on a single machine
+With this option all artifacts can be downloaded to run a Geode cluster as well as the sample application on Mac OSX or Linux machine. There is no support for Windows at this time
 
 ### Prerequisites
 1. All scripts to run the samples are written in Bash, as a result the target machine needs to be MAC OSX or Linux
@@ -22,24 +21,29 @@ With this option the project can be downloaded and the Geode cluster as well as 
 ### Set Up
 1. Download the project zip geode-demo-application-master.zip
 2. Uncompress the zip
-3. cd into the directory geode-demo-application-master
-4. cd into the geode-demo-application-master/scripts folder
+3. cd into the directory geode-demo-application-master/demo
+4. cd into the directory 'single-machine-mode'
 5. All scripts to run the demo and any dependancies are found in this folder
 ```shell
-piv-wifi-19-156:scripts lshannon$ pwd
-/Users/lshannon/Downloads/geode-demo-application-master/scripts
-piv-wifi-19-156:scripts lshannon$ ls
-app			lib			startServerA.sh
-clean_up.sh		setJDK.sh		stopCluster.sh
-conf			setenv.sh		stopServerA.sh
-geode-1.0.0.0-SNAPSHOT	startCluster.sh
-gfsh.sh			startDemo.sh
-piv-wifi-19-156:scripts lshannon$ 
+piv-wifi-19-156:geode-demo-application-master lshannon$ pwd
+/Users/lshannon/Downloads/geode-demo-application-master
+piv-wifi-19-156:geode-demo-application-master lshannon$ cd demo/
+piv-wifi-19-156:demo lshannon$ ls
+build.xml		geode-server-package	single-machine-mode
+piv-wifi-19-156:demo lshannon$ cd single-machine-mode/
+piv-wifi-19-156:single-machine-mode lshannon$ ls
+checkIfDemoIsRunning.sh	derby-server		startTransactions.sh
+cleanUp.sh		startDemo.sh		stopDemo.sh
+client-apps		startDerby.sh
+piv-wifi-19-156:single-machine-mode lshannon$
 ```
 Ensure all *.sh scripts are executable
 ```shell
 piv-wifi-19-156:scripts lshannon$ chmod +x *.sh
 ```
+To run the demo you will need 3 terminal sessions open. These will be for:
+1. Running the Derby database. The cluster will use this for Write Through operations
+2. Running the Geode Cluster and Demo Application
 
 ### Starting The Cluster
 1. If JAVA_HOME has not been set the setJDK.sh script can be ran. It will look for a JDK version 1.7 to add to JAVA_HOME. It will look in the /usr/libexec/java_home folder. If JAVA_HOME is already set, this step can be skipped
