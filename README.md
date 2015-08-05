@@ -58,28 +58,34 @@ The database will not be created until the Geode cluster starts up.
 
 ### Starting The Cluster
 1. If JAVA_HOME has not been set the setJDK.sh script can be ran. It will look for a JDK version 1.7 to add to JAVA_HOME. It will look in the /usr/libexec/java_home folder. If JAVA_HOME is already set, this step can be skipped
-2. Execute ./startCluster.sh which will
+2. Execute ./startDemo.sh which will
   * Start a Geode cluster with 2 locators and 4 servers
   * Start a Spring Boot application that will connect to the cluster in step 1 and put in historic data
+  * Start the FastFootShoes Demo application which will connect to the cluster started in step 1 and use it as a data store
 
-The follow messages will appear in a successful start (log shortened for brevity):
+The follow messages will appear in a successful start (log output shortened for brevity):
 
 This first part will show the members starting up and their classpaths
 ```shell
-piv-wifi-19-156:scripts lshannon$ ./startCluster.sh
-Using Java: /Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/
+Luke-Shannons-Macbook-Pro:single-machine-mode lshannon$ ./startDemo.sh
+Ensure that startDerby.sh has been ran in a seperate window before running the demo
+Is derby running? (type Y to confirm):
+Y
+Starting Cluster
 Starting Up: Locator A, Locator B and Server A, Server B, Server C and Server D with the FastFoot Shoes Grid Configuration
 .............................
-Locator in /Users/lshannon/Downloads/geode-demo-application-master/scripts/locatorA on 192.168.98.158[10334] as locatorA is currently online.
-Process ID: 68544
+Locator in /Users/lshannon/Downloads/geode-demo-application-master/demo/geode-server-package/locatorA on 10.74.19.156[10334] as locatorA is currently online.
+Process ID: 22092
 Uptime: 15 seconds
 GemFire Version: 1.0.0.0-SNAPSHOT
 Java Version: 1.7.0_71
-Log File: /Users/lshannon/Downloads/geode-demo-application-master/scripts/locatorA/locatorA.log
+Log File: /Users/lshannon/Downloads/geode-demo-application-master/demo/geode-server-package/locatorA/locatorA.log
 JVM Arguments: -Dgemfire.enable-cluster-configuration=false -Dgemfire.load-cluster-configuration-from-dir=false -Dgemfire.log-level=config -Xms256m -Xmx256m -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=15666 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.local.only=false -Dgemfire.launcher.registerSignalHandlers=true -Djava.awt.headless=true -Dsun.rmi.dgc.server.gcInterval=9223372036854775806
-Class-Path: /Users/lshannon/Downloads/geode-demo-application-master/scripts/geode-1.0.0.0-SNAPSHOT/lib/gemfire-core-1.0.0.0-SNAPSHOT.jar:/Users/lshannon/Downloads/geode-demo-application-master/scripts/geode-1.0.0.0-SNAPSHOT/lib/gemfire-core-dependencies.jar
+Class-Path: /Users/lshannon/Downloads/geode-demo-application-master/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/gemfire-core-1.0.0.0-SNAPSHOT.jar:/Users/lshannon/Downloads/geode-demo-application-master/demo/geode-server-package/geode-1.0.0.0-SNAPSHOT/lib/gemfire-core-dependencies.jar
 
-Successfully connected to: [host=192.168.98.158, port=1099]
+Successfully connected to: [host=10.74.19.156, port=1099]
+
+... more messages like this as the rest of the members start up...
 
 ```
 
@@ -170,8 +176,9 @@ Total Loading Time: 10 seconds
 No errors were recorded
 *************************************************************
 
-Press Enter to continue.
+Press Any Key to Start the Demo Application
 ```
+
 Leave this terminal window open and start a new one to run the demo application from.
 
 ### Starting the Demo Application
