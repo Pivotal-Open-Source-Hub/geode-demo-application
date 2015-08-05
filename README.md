@@ -201,8 +201,22 @@ The application should now be started and can be tested by loading the http://12
 
 ### 
 
-### Teardown
-1. Provided there are no other Java processes running, `killall java` will kill all running clusters and Spring Boot applications from this demo.
+### Non-Grace Full Teardown
+If a situation arises were processes and running and the shutdown script is not working, run the checkIfDemoIsRunning.sh script. If there are Locators and Servers running it will list the PID(s) and offer a prompt to kill these processes.
+
+```shell
+Luke-Shannons-Macbook-Pro:single-machine-mode lshannon$ ./checkIfDemoIsRunning.sh
+Locators Running:
+22092 22108
+Servers Running:
+22121 22134 22147 22160
+Would you like to kill these processes? ('Y' to kill)
+Y
+Locators have been killed
+Servers have been killed
+Luke-Shannons-Macbook-Pro:single-machine-mode lshannon$ 
+```
+Entering a 'Y' at the prompt will kill all these processes.
 
 ### Trouble Shooting
 ```shell
