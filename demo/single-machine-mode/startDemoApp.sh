@@ -9,9 +9,9 @@ then
 	../geode-server-package/startCluster.sh
 	echo "Loading Historic Data"
 	java -jar ./client-apps/FastFootShoesHistoricDataLoader-0.0.1-SNAPSHOT.jar
-#	echo "Starting Demo Application"
-#	java -jar ./client-apps/FastFootShoesRetail-0.0.1-RELEASE.jar
-	echo $CLOSE_MESSAGE
+	echo "Starting Demo Application - logs files will be written into this directory"
+	./startDemoApp.sh
+	echo "Demo Start Up Complete. Press Any Key To Close This"
 	read close_me
 else
 	echo "Exiting"
