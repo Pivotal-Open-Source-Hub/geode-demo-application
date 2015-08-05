@@ -44,6 +44,17 @@ piv-wifi-19-156:scripts lshannon$ chmod +x *.sh
 To run the demo you will need 3 terminal sessions open. These will be for:
 1. Running the Derby database. The cluster will use this for Write Through operations
 2. Running the Geode Cluster and Demo Application
+3. Starting the Transaction Simulator
+
+### Starting the Derby DB
+In one terminal window run the startDerby.sh script. This will start the Derby database listening on port 1527
+
+```shell
+Luke-Shannons-Macbook-Pro:single-machine-mode lshannon$ ./startDerby.sh 
+Wed Aug 05 14:37:35 EDT 2015 : Security manager installed using the Basic server security policy.
+Wed Aug 05 14:37:35 EDT 2015 : Apache Derby Network Server - 10.11.1.1 - (1616546) started and ready to accept connections on port 1527
+```
+The database will not be created until the Geode cluster starts up.
 
 ### Starting The Cluster
 1. If JAVA_HOME has not been set the setJDK.sh script can be ran. It will look for a JDK version 1.7 to add to JAVA_HOME. It will look in the /usr/libexec/java_home folder. If JAVA_HOME is already set, this step can be skipped
