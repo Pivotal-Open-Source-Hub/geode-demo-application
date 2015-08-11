@@ -28,18 +28,18 @@
 	<bean class="org.apache.geode.demo.fastfootshoes.application.listeners.ProductListener" id="productListener"/>
 
 	<gfe:client-region id="Customer" pool-name="gemfirePool" />
-	<gfe:client-region id="Product" pool-name="gemfirePool" shortcut="CACHING_PROXY">
-		<gfe:cache-listener ref="productListener"/>
-		<gfe:regex-interest result-policy="KEYS_VALUES" pattern=".*" receive-values="true"/>
+	<gfe:client-region id="Product" pool-name="gemfirePool">
+		<!-- <gfe:cache-listener ref="productListener"/> -->
+		<!-- <gfe:regex-interest result-policy="KEYS_VALUES" pattern=".*" receive-values="true"/> -->
 	</gfe:client-region>
 	<gfe:client-region id="Transaction" pool-name="gemfirePool" />
 	<gfe:client-region id="MarkUp" pool-name="gemfirePool" />
 	<gfe:client-region id="Alert" pool-name="gemfirePool" />
 	<gfe:client-region id="TransactionSummary" pool-name="gemfirePool" />
 	
-	<gfe:pool id="gemfirePool" subscription-enabled="true">
-		<gfe:locator host="localhost" port="10334" />
-		<gfe:locator host="localhost" port="10335" />
+	<gfe:pool id="gemfirePool" subscription-enabled="false">
+		<gfe:locator host="${cluster.location}" port="10334" />
+		<gfe:locator host="${cluster.location}" port="10335" />
 	</gfe:pool>
 	
 	<context:component-scan base-package="org.apache.geode.demo.fastfootshoes.clusterside.functions"/>
