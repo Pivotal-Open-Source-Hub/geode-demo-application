@@ -18,5 +18,4 @@ public class TransactionRestController {
 		data[0] = new java.util.Date().getTime();
 		return data;
 	}
-	
 }

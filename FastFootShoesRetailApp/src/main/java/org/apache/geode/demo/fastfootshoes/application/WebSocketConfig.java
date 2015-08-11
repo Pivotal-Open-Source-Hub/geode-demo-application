@@ -37,5 +37,4 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
         registry.enableSimpleBroker("/queue/", "/topic/");
         registry.setApplicationDestinationPrefixes("/app");
     }
-
 }
