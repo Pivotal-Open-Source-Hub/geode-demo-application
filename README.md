@@ -199,7 +199,7 @@ HandlerMapping     : Mapped "{[/dump],methods=[GET],params=[],headers=[],consume
 The application should now be started and can be tested by loading the http://127.0.0.1:8080/home url into a browser.
 ![demo application](/images/demo-application-home.png)
 
-### 
+### Shutting Down The Demo
 
 ### Non-Grace Full Teardown
 If a situation arises were processes and running and the shutdown script is not working, run the checkIfDemoIsRunning.sh script. If there are Locators and Servers running it will list the PID(s) and offer a prompt to kill these processes.
