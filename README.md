@@ -224,5 +224,3 @@ Error: Exception thrown by the agent : java.net.MalformedURLException: Local hos
 ```
 
 ## Geode Cluster Running On AWS
-
-## Geode Cluster Running On Docker
