@@ -2,6 +2,9 @@
 # Randy May & Luke Shannon
 cd $(dirname $0)
 source setenv.sh
+
+LOCATOR_IP=$1
+
 if [ ! -d "$SERVER_DIR_LOCATION/$LOCATOR_1" ]; then
 	mkdir $SERVER_DIR_LOCATION/$LOCATOR_1
 fi

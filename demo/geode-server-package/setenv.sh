@@ -12,7 +12,6 @@ if [ -n "$JAVA_HOME" ]; then
 	export CLOSE_MESSAGE="Press any key to close this window..."
 	export LOCATOR_1="locatorA";
 	export LOCATOR_2="locatorB";
-	export LOCATOR_IP=127.0.0.1
 	export LOCATOR_PORT_1=10334
 	export LOCATOR_PORT_2=10335
 	export PATH=$PATH:$JAVA_HOME/bin:$GEMFIRE/bin
