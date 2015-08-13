@@ -41,10 +41,9 @@ Ensure all *.sh scripts are executable
 ```shell
 piv-wifi-19-156:scripts lshannon$ chmod +x *.sh
 ```
-To run the demo you will need 3 terminal sessions open. These will be for:
+To run the demo you will need 2 terminal sessions open. These will be for
 1. Running the Derby database. The cluster will use this for Write Through operations
-2. Running the Geode Cluster and Demo Application
-3. Starting the Transaction Simulator
+2. Running the Geode Cluster, Demo Application and Transaction Simulator
 
 ### Starting the Derby DB
 In one terminal window run the startDerby.sh script. This will start the Derby database listening on port 1527
