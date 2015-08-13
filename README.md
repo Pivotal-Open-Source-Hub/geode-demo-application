@@ -33,10 +33,10 @@ single-machine-mode$
 ```shell
 single-machine-mode$ chmod +x *.sh
 ```
-To run the demo you will need 3 terminal sessions open. These will be for:
+To run the demo you will need 2 terminal sessions open. These will be for
+
 1. Running the Derby database. The cluster will use this for Write Through operations
-2. Running the Geode Cluster and Demo Application
-3. Starting the Transaction Simulator
+2. Running the Geode Cluster, Demo Application and Transaction Simulator
 
 ### Starting The Cluster
 1. If JAVA_HOME has not been set the `setJDK.sh` script can be run. It will look for a JDK version 1.7 to add to JAVA_HOME. It will look in the /usr/libexec/java_home folder. If JAVA_HOME is already set, this step can be skipped.
