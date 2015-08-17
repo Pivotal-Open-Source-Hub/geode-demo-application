@@ -8,17 +8,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<section layout:fragment="content">
+	<div layout:fragment="content">
 		<div class="row">
-			<div class="col-md-4">
-				<a href="/listAllProducts?inStock=false"
-					class="btn btn-primary btn-lg" role="button">Show All
+			<div class="col-md-8">
+				<a href="/listAllProducts?inStock=false" class="btn btn-default" role="button">Show All
 					Products</a>
-			</div>
-			<div class="col-md-4">
-				<a href="/listAllProducts?inStock=true"
-					class="btn btn-primary btn-lg" role="button">Show All
-					Products In Stock</a>
+				<a class="btn btn-default" role="button">Show All Products In Stock</a>
 			</div>
 		</div>
 
@@ -54,6 +49,6 @@
 			</div>
 			<button type="submit" class="btn btn-default">Search</button>
 		</form>
-	</section>
+	</div>
 </body>
 </html>

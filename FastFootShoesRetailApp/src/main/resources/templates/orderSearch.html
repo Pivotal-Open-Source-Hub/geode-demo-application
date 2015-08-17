@@ -4,43 +4,20 @@
 	layout:decorator="layout"
 	xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Fast Foot Shoes</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<style>
-.orderbuttonsRow {
-	width: 600px;
-  	display: block;
-  	margin-left: auto;
-  	margin-right: auto;
-}
-.orderbutton {
-  	width: 400px;
-}
-.spacer {
-	height: 25px;
-}
-</style>
+	<title>Fast Foot Shoes</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<section layout:fragment="content">
-		<div class="row orderbuttonsRow">
-			<div class="col-md-4">
-				<a href="/collectOrder" class="btn btn-primary btn-lg orderbutton" role="button">Place an Order</a>
-			</div>
+	<div layout:fragment="content">
+		<div class="orderbuttonsRow">
+			<a href="/collectOrder" class="btn btn-default btn-lg btn-block orderbutton" role="button">Place an Order</a>
 		</div>
-		<div class="spacer"></div>
-		<div class="row orderbuttonsRow" align="center">
-			<div class="col-md-4">
-				<a href="/listAllOrders" class="btn btn-primary btn-lg orderbutton" role="button">Show All Orders</a>
-			</div>
+		<div class="orderbuttonsRow">
+			<a href="/listAllOrders" class="btn btn-default btn-lg btn-block orderbutton" role="button">Show All Orders</a>
 		</div>
-		<div class="spacer"></div>
-		<div class="row orderbuttonsRow" align="center">
-			<div class="col-md-4">
-				<a href="/listAllOpenOrders" class="btn btn-primary btn-lg orderbutton" role="button">Show All Open Orders</a>
-			</div>
+		<div class="orderbuttonsRow">
+			<a href="/listAllOpenOrders" class="btn btn-default btn-lg btn-block orderbutton" role="button">Show All Open Orders</a>
 		</div>
-		<div class="spacer"></div>
-	</section>
+	</div>
 </body>
 </html>

@@ -1,0 +1,86 @@
+.alert {
+	color: blue;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.alertList {
+	height: 200px;
+	overflow-y: auto;
+}
+
+#chart {
+	width: 100%;
+	height: 240px;
+}
+
+/* orderSearch */
+.orderbuttonsRow {
+	width: 350px;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-bottom: 25px;
+}
+
+.title {
+	background-image: url('../images/FLAMINGSHOE.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 20px 0;
+	margin: 20px 0;
+}
+
+.title h1 {
+	font-size: 30px;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0 0 0 230px;
+}
+
+.navbar {
+	background-image: linear-gradient(to bottom, #7b48fe 0, #6a3beb 100%);
+	border: 1px solid #211a36;
+}
+
+.navbar-nav>li>a {
+	color: #fefefe;
+	text-shadow: none;
+}
+
+.nav>li>a:hover {
+	background-color: #6a3beb;
+}
+
+.panel {
+	color: #333;
+	text-align: center;
+}
+
+.panel-heading {
+	text-align: center;
+}
+
+.alert {
+	color: #333;
+}
+
+.alert span {
+	font-weight: bold;
+}
+
+.fa-arrow-up {
+	color: green;
+}
+
+.fa-arrow-down {
+	color: red;
+}
+
+a.paginate_button {
+	margin: 0 4px 0 0;
+	cursor: pointer;
+}
+
+footer {
+	margin: 30px 0 0 0;
+}

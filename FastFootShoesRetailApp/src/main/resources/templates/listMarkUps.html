@@ -12,40 +12,40 @@
 	</script>
 </head>
 <body>
-	<section layout:fragment="content">
-	<div style="padding-left: 10px;">
-		<h4>Description:</h4>
-		<h5>The rate of each Level is multipled by the whole sale cost of the purchased product to give the retail cost the customer pays.</h5>
-		<h5>The hight their transaction score the lower the rate, resulting in a lower retail price</h5>
-	</div>
-	<br/>
+	<div layout:fragment="content">
+		<div style="padding-left: 10px;">
+			<h4>Description:</h4>
+			<h5>The rate of each Level is multipled by the whole sale cost of the purchased product to give the retail cost the customer pays.</h5>
+			<h5>The hight their transaction score the lower the rate, resulting in a lower retail price</h5>
+		</div>
+		<br/>
 		<table id="markUps" class="table table-hover">
-		<thead>
-			<tr>
-				<th>Level Name</th>
-				<th>Rate</th>
-				<th>Qualifying Floor</th>
-				<th>Qualifying Ceiling</th>
-			</tr>
-		</thead>
-		
-		<tfoot>
-			<tr>
-				<th>Level Name</th>
-				<th>Rate</th>
-				<th>Qualifying Floor</th>
-				<th>Qualifying Ceiling</th>
-			</tr>
-		</tfoot>
-		<tbody>
-			<tr th:each="markUp : ${markUps}">
-				<td th:text="${markUp.levelName}">Level</td>
-				<td th:text="${markUp.rate}">Rate</td>
-				<td th:text="${markUp.qualifyingTransactionCountFloor}">Floor</td>
-				<td th:text="${markUp.qualifyingTransactionCountCeiling}">Ceiling</td>
-			</tr>
-		</tbody>
+			<thead>
+				<tr>
+					<th>Level Name</th>
+					<th>Rate</th>
+					<th>Qualifying Floor</th>
+					<th>Qualifying Ceiling</th>
+				</tr>
+			</thead>
+			
+			<tfoot>
+				<tr>
+					<th>Level Name</th>
+					<th>Rate</th>
+					<th>Qualifying Floor</th>
+					<th>Qualifying Ceiling</th>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr th:each="markUp : ${markUps}">
+					<td th:text="${markUp.levelName}">Level</td>
+					<td th:text="${markUp.rate}">Rate</td>
+					<td th:text="${markUp.qualifyingTransactionCountFloor}">Floor</td>
+					<td th:text="${markUp.qualifyingTransactionCountCeiling}">Ceiling</td>
+				</tr>
+			</tbody>
 		</table>
-	</section>
+	</div>
 </body>
 </html>
