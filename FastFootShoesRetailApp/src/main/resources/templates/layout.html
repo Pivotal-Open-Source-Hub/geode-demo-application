@@ -6,8 +6,8 @@
 <title>Layout page</title>
 
 <!-- Boot Strap CSS -->
-<link href="../static/css/bootstrap.css" rel="stylesheet" media="screen" th:href="@{/css/bootstrap.css}" />
-<link href="../static/css/bootswatch.min.css" rel="stylesheet" media="screen" th:href="@{/css/bootswatch.less}" />
+<link rel="stylesheet" media="screen" th:href="@{/css/bootstrap.min.css}" />
+<link rel="stylesheet" media="screen" th:href="@{/css/bootstrap-theme.min.css}" />
 
 <!-- Data Tables CSS -->
 <link href="webjars/datatables/1.10.2/css/jquery.dataTables.css" />
@@ -17,6 +17,9 @@
 
 <!-- font awesome CSS -->
 <link rel="stylesheet" href="webjars/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+<!-- Project CSS -->
+<link rel="stylesheet" media="screen" th:href="@{/css/style.css}" />
 
 <!-- jQuery JS -->
 <script type="text/javascript" src="webjars/jquery/1.8.2/jquery.min.js"></script>
@@ -38,79 +41,21 @@
 <!-- Project JS -->
 <script type="text/javascript" th:src="@{js/gf-textautocomplete.js}"></script>
 
-
-
 </head>
 <body>
 	<div class="container">
-		<header class="text-center">
-			<div class="well">
-				<div class="row">
-					<div class="col-md-4">
-						<img alt="" src="images/FLAMINGSHOE.png" width="300px" />
-					</div>
-					<div class="col-md-8" align="left">
-						<h2>Fast Foot Shoes - Order Entry System</h2>
-					</div>
-				</div>
-			</div>
-			<div class="navbar navbar-inverse">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target=".navbar-inverse-collapse">
-						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="/home">Home</a>
-				</div>
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target=".navbar-inverse-collapse">
-						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="/productSearch">Products</a>
-				</div>
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target=".navbar-inverse-collapse">
-						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="/orderSearch">Orders</a>
-				</div>
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target=".navbar-inverse-collapse">
-						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="/alerts">Messages</a>
-				</div>
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target=".navbar-inverse-collapse">
-						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="/listMarkUps">Discount Program</a>
-				</div>
-				<form class="navbar-form navbar-right" action="#"
-					name="customerSearch" th:action="@{/findCustomerByEmail}"
-					method="post">
-					<input type="text" id="customerSearchAutocomplete" name="email"
-						class="form-control col-lg-8" placeholder="Find Customer By Email" />
-					<input type="hidden" name="searchCustomerId" id="searchCustomerId"
-						value="" />
-					<button type="submit" class="btn btn-primary">Submit</button>
-				</form>
-			</div>
-		</header>
-		<div class="container">
-
-			<section layout:fragment="content">
-				<p>Page content goes here</p>
-			</section>
+		<div class='title'><h1>Fast Foot Shoes</h1></div>
+		<div class="navbar">
+			<ul class="nav navbar-nav">
+				<li><a href="/">Dashboard</a></li>
+				<li><a href="/productSearch">Products</a></li>
+				<li><a href="/orderSearch">Orders</a></li>
+				<li><a href="/alerts">Messages</a></li>
+				<li><a href="/listMarkUps">Discount Program</a></li>
+			</ul>
+		</div> <!--navbar-->
+		<div layout:fragment="content">
+			Page contents go here
 		</div>
 		<footer>
 			<div class="well">

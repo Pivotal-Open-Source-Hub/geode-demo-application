@@ -1,3 +1,3 @@
 #!/bin/bash
-
-java -jar ./app/FastFootShoesHistoricDataLoader-0.0.1-SNAPSHOT.jar
+ls
+java -jar ../geode-server-package/app/FastFootShoesHistoricDataLoader-0.0.1-SNAPSHOT.jar

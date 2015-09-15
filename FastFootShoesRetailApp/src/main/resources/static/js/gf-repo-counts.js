@@ -6,7 +6,7 @@ function requestMessageCount() {
 	$.ajax({
 		url : '/alertCount',
 		success : function(messages) {
-			document.getElementById("missedOrders").innerHTML = messages;
+			$("#missedOrders").html(messages);
 			// call it again after one second
 			setTimeout(requestMessageCount, timeoutdelay);
 		},
@@ -27,20 +27,21 @@ requestProductCounts();
 function updateUI(data, divId) {
 	var returnVal = "";
 	$.each(data, function(key, val) {
-		returnVal += "<span style='color:black;font-weight:normal;'>" + key + "</span>" + " : " + val;
+		returnVal += "<p><span>" + key + "</span>" + " : " + val;
 		if (previousVals[key] < val) {
-			returnVal += " <i class='fa fa-arrow-up' style='color:green'></i>";
+			returnVal += " <i class='fa fa-arrow-up'></i>";
 		} else if (previousVals[key] > val) {
-			returnVal += " <i class='fa fa-arrow-down' style='color:red'></i>";
+			returnVal += " <i class='fa fa-arrow-down'></i>";
 		}
-		returnVal += "<br/>";
+		returnVal += "</p>";
 		previousVals[key] = val;
 	});
-	document.getElementById(divId).innerHTML = returnVal;
+	divId = $("#"+divId);
+	divId.html(returnVal);
 	if (returnVal.length == 0) {
-		document.getElementById(divId).innerHTML = "<span style='color:red;font-weight:normal;'>N/A</span>";
+		divId.html("N/A");
 	}
 	else {
-		document.getElementById(divId).innerHTML = returnVal;
+		divId.html(returnVal);
 	}
 }

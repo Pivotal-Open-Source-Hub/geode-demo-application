@@ -8,30 +8,25 @@
 
 </head>
 <body>
-	<section layout:fragment="content">
+	<div layout:fragment="content">
 		<form action="#" th:action="@{/placeOrder}" method="post" id="orderForm" name="orderForm">
-		<div class="form-group">
-				<label for="productsAutocomplete">Select a Product : </label> 
+			<div class="form-group">
+				<label for="productsAutocomplete">Select a Product</label> 
 				<input class="form-control col-lg-8" id="productsAutocomplete" th:value="${productString}" size="60" />
 				<input type="hidden" name="productId" id="productId" th:value="${productId}"  />
-		</div> 
-		 <div class="form-group">
-				<label for="customerAutocomplete">Select a Customer : </label>
+			</div> 
+			 <div class="form-group">
+				<label for="customerAutocomplete">Select a Customer</label>
 				<input class="form-control col-lg-8" id="customerAutocomplete" size="60" />
 				<input type="hidden" name="customerId" id="customerId" value="" />
-		</div>
-		<div class="form-group">
-				<label for="quantity">Specifiy a Quantity : </label>
+			</div>
+			<div class="form-group">
+				<label for="quantity">Specify a Quantity</label>
 				<input class="form-control col-lg-8" name="quantity" id="quantity" size="60" />
-		</div>
-		<br/>
-		<br/>
-		<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+			<br/>
+			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
-		<br/>
-		<br/>
-		<br/>
-	</section>
-
+	</div>
 </body>
 </html>

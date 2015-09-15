@@ -33,7 +33,7 @@
 	<gfe:client-region id="TransactionSummary" pool-name="gemfirePool" />
 	
 	<gfe:pool id="gemfirePool">
-		<gfe:locator host=localhost port="10334" />
+		<gfe:locator host="localhost" port="10334" />
 		<gfe:locator host="localhost" port="10335" />
 	</gfe:pool>
 	

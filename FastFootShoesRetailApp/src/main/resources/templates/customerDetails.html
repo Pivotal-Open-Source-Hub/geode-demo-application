@@ -9,7 +9,7 @@
     
 </head>
 <body>
-	<section layout:fragment="content">
+	<div layout:fragment="content">
 	<h4>Customer Details:</h4>
 	<form class="form-horizontal" action="#" th:action="@{/updateCustomer}" th:object="${cust}" method="post">
 		<input type="hidden" id="id" name="id" th:value="*{id}" size="80" />
@@ -82,6 +82,6 @@
 	      </tr>
 	    </table>
     </div>
-	</section>
+	</div>
 </body>
 </html> 
