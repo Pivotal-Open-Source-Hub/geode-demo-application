@@ -26,7 +26,7 @@ public class FastFootShoesHistoricDataLoaderApplication {
 				System.out.println("**********Loading the grid**********");
 				cl.loadData();
 				System.out.println("**********Loading Completed**********");
-				System.out.println("**********Press Enter To Exit**********");
+				System.out.println("**********Press Enter To Continue**********");
 			    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 			    try {
 					bufferedReader.readLine();
