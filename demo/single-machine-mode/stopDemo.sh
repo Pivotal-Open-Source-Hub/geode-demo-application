@@ -11,4 +11,7 @@ echo "Stopping the Cluster"
 echo "Deleting the Derby DB files"
 rm -fr fastfootshoes
 
-echo "Shut Down Completed"
+echo "Cleaning Up Working Folders"
+
+
+echo "Shut Down & Clean Up Completed"
