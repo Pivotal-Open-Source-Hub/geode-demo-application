@@ -1,0 +1,2 @@
+# FastFoot Shoes Transaction Simulator
+This project connects to the cluster (uses the client-cache.xml found in the model project) and enters 25 Transaction objects in the Transaction region every 5 seconds. This results is elements of the Retail application dashboard change in response to cache values changing.
