@@ -20,8 +20,8 @@ import com.gemstone.gemfire.pdx.internal.PdxInstanceImpl;
 /**
  * This listener will be called when the Transaction region is updated.
  * It is used to update Product stock based on the Transactions being placed
- * NOTE: This is not best practice and will not ensure consistency. This is purely for example purposes to illustrate how
- * listeners can be used
+ * NOTE: This is not best practice:
+ * http://gemfire81.docs.pivotal.io/latest/userguide/index.html#developing/events/writing_callbacks_that_modify_the_cache.html#writing_callbacks_that_modify_the_cache
  * 
  * @author lshannon
  *
@@ -38,7 +38,7 @@ public class TransactionListener extends CacheListenerAdapter<String, Object> im
 	/**
 	 * After an entry is create in the Transaction region, the Product in the Transaction will
 	 * have its stock updated to take into account the quantity in the Transaction
-	 * NOTE: This is not best practice, and is for demonstrative purposes only.
+	 * NOTE: http://gemfire81.docs.pivotal.io/latest/userguide/index.html#developing/events/writing_callbacks_that_modify_the_cache.html#writing_callbacks_that_modify_the_cache
 	 */
 	@Override
 	public void afterCreate(EntryEvent<String, Object> entryEvent) {

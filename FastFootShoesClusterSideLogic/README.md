@@ -13,5 +13,14 @@ ProductGroupCounter - This counts the number of products by Brand. It is called 
 Spring Data Gemfire Interfaces are used to execute functions. The org.apache.geode.demo.fastfootshoes.clusterside.test.TestFunctions class demonstrates how this can be called and configured on both the server and client.
 
 ## Listeners
+TransactionalListener - This executes when the Transaction Region is updated. It takes the quantity of product for the transaction and then decrements stockOnHand attribute for the Product entry in the Product region (the case of if there is even enough stock to place to order is handled in the application business logic).
+NOTE: This is for demonstrative purposes only. A listener is a synchronous event and poorly implemented logic can result in blocking cache functionality:
+http://gemfire81.docs.pivotal.io/latest/userguide/index.html#developing/events/writing_callbacks_that_modify_the_cache.html#writing_callbacks_that_modify_the_cache
+ 
 ## Util
+AlertsDerbyDAO - This is a Data Access Object for updating the Derby Data base with values obtained from the Geode Cache
+
+ReferenceHelper - This is a convenience class for converting the PDXInstance type (which is how Gemfire/Geode stores values is serialized with PDX Serialization) to its original object type. This check should be done if 'read serialized' is enabled on the server
+
 ## Writer
+AlertCacheWriter - This class uses the AlertsDerbyDAO to write each new entry to the Alerts region to the Derby Database. This is a synchronous operation
